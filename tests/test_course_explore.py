@@ -1,0 +1,175 @@
+import unittest
+
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from crawl import CourseExplore
+import requests
+from bs4 import BeautifulSoup
+
+class TestCourseExplore(unittest.TestCase):
+    def setUp(self):
+        self.course_explore = CourseExplore()
+
+    def setupShtml(self, url):
+        pg = requests.get(url)
+        s_html = BeautifulSoup(pg.text, 'html.parser')
+        return s_html
+
+    # Check if all of my functions work individually
+    def test_reset_crawl(self):
+        self.course_explore.visited = ['url1', 'url2']
+        self.course_explore.prereq_list = ['prereq1', 'prereq2']
+        self.course_explore.title_list = ['title1', 'title2']
+
+        self.course_explore.reset_crawl()
+
+        self.assertEqual(self.course_explore.visited, [])
+        self.assertEqual(self.course_explore.prereq_list, [])
+        self.assertEqual(self.course_explore.title_list, [])
+
+    # Check if links are returned correctly, and filters out utsc/utm/engineering
+    def test_pre_links(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
+        links = self.course_explore.find_pre_links(self.setupShtml(test_url))
+
+        expected_links = [
+            "https://artsci.calendar.utoronto.ca/course/CSC207H1",
+            "https://artsci.calendar.utoronto.ca/course/CSC180H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT235Y1",
+            "https://artsci.calendar.utoronto.ca/course/MAT237Y1",
+            "https://artsci.calendar.utoronto.ca/course/MAT257Y1",
+            "https://artsci.calendar.utoronto.ca/course/MAT135H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT136H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT137Y1",
+            "https://artsci.calendar.utoronto.ca/course/MAT157Y1",
+            "https://artsci.calendar.utoronto.ca/course/MAT194H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT195H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT223H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT240H1",
+            "https://artsci.calendar.utoronto.ca/course/STA237H1",
+            "https://artsci.calendar.utoronto.ca/course/STA247H1",
+            "https://artsci.calendar.utoronto.ca/course/STA255H1",
+            "https://artsci.calendar.utoronto.ca/course/STA257H1",
+            "https://artsci.calendar.utoronto.ca/course/STA286H1",
+        ]
+        self.assertEqual(expected_links, links)
+
+    # Tests if prerequisite string is simply returned correctly, there is no filtering here
+    def test_prereq_string(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
+        self.course_explore.find_pre_links(self.setupShtml(test_url))
+
+        result_string = self.course_explore.prereq_list[0].replace(" ", "")
+        expected_result = "CSC207H1/ APS105H1/ APS106H1/ ESC180H1/ CSC180H1; MAT235Y1/​ MAT237Y1/​ MAT257Y1/​ (minimum of 77% in MAT135H1 and MAT136H1)/ (minimum of 73% in MAT137Y1)/ (minimum of 67% in MAT157Y1)/ MAT291H1/ MAT294H1/ (minimum of 77% in MAT186H1, MAT187H1)/ (minimum of 73% in MAT194H1, MAT195H1)/ (minimum of 73% in ESC194H1, ESC195H1); MAT223H1/ MAT240H1/ MAT185H1/ MAT188H1; STA237H1/ STA247H1/ STA255H1/ STA257H1/ STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1".replace(" ", "")
+        self.assertEqual(result_string, expected_result)
+
+    # Test if page doesn't have prereq
+    def test_prereq_noprereq(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc108h1"
+        result = self.course_explore.find_pre_links(self.setupShtml(test_url))
+        saved_prereqs = self.course_explore.prereq_list
+        self.assertEqual(result, [], "Prerequisite Links failed when there should be no prerequisites")
+        self.assertEqual(saved_prereqs, [''], "Should have a single item to cover up the spot")
+
+    def test_prereq_noprereq2(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/CSC421H1"
+        result = self.course_explore.find_pre_links(self.setupShtml(test_url))
+        saved_prereqs = self.course_explore.prereq_list
+        self.assertEqual(result, [], "Prerequisite Links failed when there should be no prerequisites")
+        self.assertEqual(saved_prereqs, [''], "Should have a single item to cover up the spot")
+
+    # Crawl testing
+    # Test if page not found is avoided and not on my calendar is avoided
+    def test_crawl_pagenotfound(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/CSC421H1"
+        self.course_explore.crawl(test_url)
+        result_titles = self.course_explore.title_list
+        result_prereqs = self.course_explore.prereq_list
+        self.assertEqual(result_titles, [], "Should have nothing in the title because page is null")
+        self.assertEqual(result_prereqs, [], "Should have nothing in the course prereqs to match the title")
+
+    # Test if courses are visited at an expected order for small courses
+        # check if the title to prerequisite is as expected
+
+    # TEST CSC108 - no prerequisites
+    def test_crawl_test1(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc108h1"
+        self.course_explore.crawl(test_url)
+        result_titles = self.course_explore.title_list
+        result_prereqs = self.course_explore.prereq_list
+        result_visited = self.course_explore.visited
+
+        self.assertEqual(result_titles, ["CSC108H1: Introduction to Computer Programming"], "Should only have a single title")
+        self.assertEqual(result_prereqs, [""], "Should have a single item of 0 prereq, matching with CSC108")
+
+        self.assertTrue(result_visited["https://artsci.calendar.utoronto.ca/course/csc108h1"], "Should have only visited CSC108")
+        # Delete the (valid) title and the (visited) link since they are both recorded
+        del result_visited["https://artsci.calendar.utoronto.ca/course/csc108h1"]
+        del result_visited["CSC108H1: Introduction to Computer Programming"]
+        self.assertTrue(result_visited == {})
+
+    # TEST CSC165 - Prerequisites
+    def test_crawl_test2(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc236h1"
+        self.course_explore.crawl(test_url)
+        result_titles = self.course_explore.title_list
+        result_prereqs = self.course_explore.prereq_list
+        # This is a dictionary now
+        result_visited = self.course_explore.visited
+
+        expected_titles = ["CSC236H1: Introduction to the Theory of Computation",
+                           "CSC148H1: Introduction to Computer Science",
+                           "CSC108H1: Introduction to Computer Programming",
+                           "CSC165H1: Mathematical Expression and Reasoning for Computer Science",
+                           "CSC111H1: Foundations of Computer Science II",
+                           "CSC110Y1: Foundations of Computer Science I"]
+        expected_prereqs = ["(60% or higher in CSC148H1, 60% or higher in CSC165H1) / (60% or higher in CSC111H1)",
+                            "CSC108H1/ (equivalent programming experience)",
+                            "",
+                            "",
+                            "CSC110Y1 (70% or higher)",
+                            ""]
+        expected_visited = ["https://artsci.calendar.utoronto.ca/course/csc236h1",
+                            "https://artsci.calendar.utoronto.ca/course/csc148h1",
+                            "https://artsci.calendar.utoronto.ca/course/csc108h1",
+                            "https://artsci.calendar.utoronto.ca/course/csc165h1",
+                            "https://artsci.calendar.utoronto.ca/course/csc111h1",
+                            "https://artsci.calendar.utoronto.ca/course/csc110y1"]
+
+        # Checks
+        # Checking Valid Titles
+        self.assertEqual(result_titles, expected_titles, "Titles should be equal w/o formatting")
+        # Checking Expected visited (Valid and "page not found", "Sorry this course is not in your calendar")
+        print(result_visited)
+        for i in range(len(expected_visited)):
+            print(result_visited)
+            capital_case = expected_visited[i][:-8] + expected_visited[i][-8:].upper()
+            lower_case = expected_visited[i][:-8] + expected_visited[i][-8:].lower()
+            capital_has_visited = result_visited.get(capital_case, False)
+            lower_has_visited = result_visited.get(lower_case, False)
+            print(capital_case, lower_case, capital_has_visited, lower_has_visited)
+
+            self.assertTrue(capital_has_visited or lower_has_visited)
+            if capital_has_visited:
+                del result_visited[capital_case]
+            else:
+                del result_visited[lower_case]
+
+
+        # delete all the rest of stuff in expected visited, and seeing if those are the only visited
+        for i in range(len(expected_titles)):
+            del result_visited[expected_titles[i]]
+        self.assertTrue(result_visited == {})
+
+        self.assertEqual(len(result_prereqs), len(expected_prereqs), "Prereqs lengths should be equal")
+        self.assertEqual(len(result_prereqs), len(result_titles), "Prereq amount should be equal to title amount")
+        for i in range(len(result_prereqs)):
+            self.assertEqual(result_prereqs[i].replace(" ", ""), expected_prereqs[i].replace(" ",""), "Prereq should be equal by removing spaces")
+
+    # TEST CSC2--
+
+
+if __name__ == '__main__':
+    test = TestCourseExplore()
