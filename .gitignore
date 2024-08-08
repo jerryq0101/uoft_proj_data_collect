@@ -3,3 +3,5 @@
 htmlcov
 .coverage
 .python-version
+.idea/
+__pycache__/

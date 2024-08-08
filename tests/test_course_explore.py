@@ -168,7 +168,95 @@ class TestCourseExplore(unittest.TestCase):
         for i in range(len(result_prereqs)):
             self.assertEqual(result_prereqs[i].replace(" ", ""), expected_prereqs[i].replace(" ",""), "Prereq should be equal by removing spaces")
 
-    # TEST CSC2--
+    # TEST CSC258 MORE COMPLEX PRE
+    def test_crawl_test3(self):
+        url = "https://artsci.calendar.utoronto.ca/course/csc258h1"
+
+        visited = {
+            "https://artsci.calendar.utoronto.ca/course/csc258h1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc148h1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc108h1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc165h1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc240h1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc110y1": True,
+            "https://artsci.calendar.utoronto.ca/course/csc111h1": True
+        }
+
+        expected_title_list = [
+            "CSC258H1: Computer Organization",
+            "CSC148H1: Introduction to Computer Science",
+            "CSC108H1: Introduction to Computer Programming",
+            "CSC165H1: Mathematical Expression and Reasoning for Computer Science",
+            "CSC240H1: Enriched Introduction to the Theory of Computation",
+            "CSC110Y1: Foundations of Computer Science I",
+            "CSC111H1: Foundations of Computer Science II"
+        ]
+
+        expected_pre_list = [
+            "(60% or higher in (CSC148H1/CSC148H5/CSCA48H3), 60% or higher in (CSC165H1/CSC240H1/MAT102H5/MATA67H3/CSCA67H3))/60% or higher in CSC111H1",
+
+            "CSC108H1/(equivalent programming experience)",
+
+            "",
+
+            "",
+
+            "CSC110Y1 (with a minimum mark of at least 70%)/CSC165H1 (with a minimum mark of at least 85%)/students with a strong mathematical background who have not completed CSC110Y1 or CSC165H1 may enrol in CSC240H1 as an enriched alternative to CSC165H1",
+
+            "",
+
+            "CSC110Y1 (70% or higher)",
+        ]
+
+        self.course_explore.crawl(url)
+
+        result_titles = self.course_explore.title_list
+        result_prereqs = self.course_explore.prereq_list
+        result_visited = self.course_explore.visited
+        
+
+        # Check if all the titles are correct order
+        self.assertEqual(len(expected_title_list), len(result_titles), "Title lengths should be equal")
+        self.assertEqual(expected_title_list, result_titles, "Title list should be equal")
+    
+
+        # Check all the prereqs are correct
+        self.assertEqual(len(expected_pre_list), len(result_prereqs), "Prereqs lengths should be equal")
+        for i in range(len(expected_pre_list)):
+            self.assertEqual(expected_pre_list[i].replace(" ", ""), result_prereqs[i].replace(" ", ""), "Prereq should be equal by removing spaces")
+
+        print(result_visited)
+        # Check if all of the visiteds are correct
+        for key in visited:
+            print(key)
+            upper_case = key[0:-8] + key[-8:].upper()
+            lower_case = key[0:-8] + key[-8:].lower()
+            print(upper_case, lower_case)
+
+            key_is_upper_case = result_visited.get(upper_case, False)
+            key_is_lower_case = result_visited.get(lower_case, False)
+            self.assertTrue(key_is_upper_case or key_is_lower_case, f"Should have visited {key} either in upper or lower case")
+            
+            # delete key depending on upper or lower case
+            if key_is_upper_case: del result_visited[upper_case]
+            else: del result_visited[lower_case]
+
+        # Check if the visited has extra elements => extra titles or extra links => FUCK
+        
+        # delete all titles
+        for i in expected_title_list:
+            del result_visited[i]
+
+        self.assertTrue(result_visited == {})
+
+        
+    # A 300 + 400 level test
+    
+
+    # TEST PRE + COR
+    # For the request, I am going to do PRE + COR only first.
+
+    # TEST PRE + COR + EXCL
 
 
 if __name__ == '__main__':

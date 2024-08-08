@@ -8,9 +8,41 @@ base_url = "https://artsci.calendar.utoronto.ca"
 
 # Start from csc263
 test_url = "https://artsci.calendar.utoronto.ca/course/csc263h1"
-eng_courses = ["AER", "APS", "BME", "CHE", "CIV", "ESC", "DMI", "ECE", "EDE", "MIE", "MSE", "TEP", "JCB", "JCC",
-                   "JCF", "JCH", "JCI", "JCM", "JDE", "JEB", "JEI", "JEL", "JEM", "JEN", "JFE", "JMA", "JMM", "JMY",
-                   "JMZ", "JNC", "JPB", "JSB"]
+eng_courses = {
+    "AER": True,
+    "APS": True,
+    "BME": True,
+    "CHE": True,
+    "CIV": True,
+    "ESC": True,
+    "DMI": True,
+    "ECE": True,
+    "EDE": True,
+    "MIE": True,
+    "MSE": True,
+    "TEP": True,
+    "JCB": True,
+    "JCC": True,
+    "JCF": True,
+    "JCH": True,
+    "JCI": True,
+    "JCM": True,
+    "JDE": True,
+    "JEB": True,
+    "JEI": True,
+    "JEL": True,
+    "JEM": True,
+    "JEN": True,
+    "JFE": True,
+    "JMA": True,
+    "JMM": True,
+    "JMY": True,
+    "JMZ": True,
+    "JNC": True,
+    "JPB": True,
+    "JSB": True
+}
+
 
 class CourseExplore:
     # Instance Variables
@@ -58,8 +90,6 @@ class CourseExplore:
         # make sure no infinite recursion
         # record this link into visited
         self.visited[url] = True
-
-        print(self.visited)
 
         s_html = self.get_html(url)
         title = self.find_title(s_html).strip()
@@ -169,7 +199,8 @@ class CourseExplore:
                 link_string = i.attrs["href"]
 
                 # Filtering out utm / utsc / engineering people and engineering courses with broken links
-                if link_string[0:7] == '/course' and (link_string[8:11] not in eng_courses):
+                is_eng = link_string[8:11] in eng_courses
+                if link_string[0:7] == '/course' and not is_eng:
                     pre_link = base_url + link_string
                     pre_links.append(pre_link)
 
@@ -205,7 +236,8 @@ class CourseExplore:
             coreq_links = []
             for i in a_tags:
                 link_string = i.attrs["href"]
-                if link_string[0:7] == '/course' and (link_string[8:11] not in eng_courses):
+                is_eng = link_string[8:11] in eng_courses
+                if link_string[0:7] == '/course' and not is_eng:
                     coreq_links.append(base_url + link_string)
             return coreq_links
         else:
