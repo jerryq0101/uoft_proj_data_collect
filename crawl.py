@@ -246,6 +246,6 @@ class CourseExplore:
 
 if __name__ == "__main__":
     test = CourseExplore()
-    url = "https://artsci.calendar.utoronto.ca/course/csc240h1"
+    url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
     test.crawl(url)
     test.print_results()

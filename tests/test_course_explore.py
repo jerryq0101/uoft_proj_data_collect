@@ -53,6 +53,9 @@ class TestCourseExplore(unittest.TestCase):
             "https://artsci.calendar.utoronto.ca/course/STA255H1",
             "https://artsci.calendar.utoronto.ca/course/STA257H1",
             "https://artsci.calendar.utoronto.ca/course/STA286H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT194H1",
+            "https://artsci.calendar.utoronto.ca/course/MAT195H1",
+            "https://artsci.calendar.utoronto.ca/course/CHM139H1",
         ]
         self.assertEqual(expected_links, links)
 
@@ -249,9 +252,135 @@ class TestCourseExplore(unittest.TestCase):
 
         self.assertTrue(result_visited == {})
 
+    # 300 + 400 level tests
+    def test_crawl_test4(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
+        self.course_explore.crawl(test_url)
+        result_visited = self.course_explore.visited
+        result_titles = self.course_explore.title_list
+
+        expected_visited = [
+            "https://artsci.calendar.utoronto.ca/course/csc311h1",
+            "https://artsci.calendar.utoronto.ca/course/csc207h1",
+            "https://artsci.calendar.utoronto.ca/course/csc148h1",
+            "https://artsci.calendar.utoronto.ca/course/csc108h1",
+            "https://artsci.calendar.utoronto.ca/course/csc111h1",
+            "https://artsci.calendar.utoronto.ca/course/csc110y1",
+            "https://artsci.calendar.utoronto.ca/course/CSC180H1",
+            "https://artsci.calendar.utoronto.ca/course/mat235y1",
+            "https://artsci.calendar.utoronto.ca/course/mat133y1",
+            "https://artsci.calendar.utoronto.ca/course/mat135h1",
+            "https://artsci.calendar.utoronto.ca/course/mat136h1",
+            "https://artsci.calendar.utoronto.ca/course/mat137y1",
+            "https://artsci.calendar.utoronto.ca/course/mat157y1",
+            "https://artsci.calendar.utoronto.ca/course/mat237y1",
+            "https://artsci.calendar.utoronto.ca/course/mat138h1",
+            "https://artsci.calendar.utoronto.ca/course/mat246h1",
+            "https://artsci.calendar.utoronto.ca/course/mat223h1",
+            "https://artsci.calendar.utoronto.ca/course/mat240h1",
+            "https://artsci.calendar.utoronto.ca/course/mat257y1",
+            "https://artsci.calendar.utoronto.ca/course/mat247h1",
+            "https://artsci.calendar.utoronto.ca/course/mat194h1",
+            "https://artsci.calendar.utoronto.ca/course/mat195h1",
+            "https://artsci.calendar.utoronto.ca/course/sta237h1",
+            "https://artsci.calendar.utoronto.ca/course/sta247h1",
+            "https://artsci.calendar.utoronto.ca/course/sta255h1",
+            "https://artsci.calendar.utoronto.ca/course/sta220h1",
+            "https://artsci.calendar.utoronto.ca/course/sta221h1",
+            "https://artsci.calendar.utoronto.ca/course/sta288h1",
+            "https://artsci.calendar.utoronto.ca/course/bio230h1",
+            "https://artsci.calendar.utoronto.ca/course/bio130h1",
+            "https://artsci.calendar.utoronto.ca/course/chm135h1",
+            "https://artsci.calendar.utoronto.ca/course/chm136h1",
+            "https://artsci.calendar.utoronto.ca/course/CHM138H1",
+            "https://artsci.calendar.utoronto.ca/course/CHM139H1",
+            "https://artsci.calendar.utoronto.ca/course/chm151y1",
+            "https://artsci.calendar.utoronto.ca/course/bio255h1",
+            "https://artsci.calendar.utoronto.ca/course/psy201h1",
+            "https://artsci.calendar.utoronto.ca/course/psy100h1",
+            "https://artsci.calendar.utoronto.ca/course/cog250y1",
+            "https://artsci.calendar.utoronto.ca/course/ggr270h1",
+            "https://artsci.calendar.utoronto.ca/course/eeb225h1",
+            "https://artsci.calendar.utoronto.ca/course/bio120h1",
+            "https://artsci.calendar.utoronto.ca/course/eco220y1",
+            "https://artsci.calendar.utoronto.ca/course/eco101h1",
+            "https://artsci.calendar.utoronto.ca/course/eco102h1",
+            "https://artsci.calendar.utoronto.ca/course/eco105y1",
+            "https://artsci.calendar.utoronto.ca/course/sta257h1",
+            "https://artsci.calendar.utoronto.ca/course/STA286H1"
+        ]
+
+        expected_titles = [
+            "CSC311H1: Introduction to Machine Learning",
+            "CSC207H1: Software Design",
+            "CSC148H1: Introduction to Computer Science",
+            "CSC108H1: Introduction to Computer Programming",
+            "CSC111H1: Introduction to Computational Thinking",
+            "CSC110Y1: Computer Science Fundamentals",
+            "CSC180H1: Introduction to Computer Programming",
+            "MAT235Y1: Calculus III",
+            "MAT133Y1: Calculus and Linear Algebra for Commerce",
+            "MAT135H1: Calculus I (for Physical Sciences and Engineering)",
+            "MAT136H1: Calculus II (for Physical Sciences and Engineering)",
+            "MAT137Y1: Calculus",
+            "MAT157Y1: Analysis I",
+            "MAT237Y1: Multivariable Calculus",
+            "MAT138H1: Introduction to Proofs",
+            "MAT246H1: Abstract Algebra I",
+            "MAT223H1: Linear Algebra I",
+            "MAT240H1: Algebra I",
+            "MAT257Y1: Analysis II",
+            "MAT247H1: Algebra II",
+            "MAT194H1: Mathematics for Commerce",
+            "MAT195H1: Calculus II for Commerce",
+            "STA237H1: Probability with Computer Applications",
+            "STA247H1: Probability with Computer Applications II",
+            "STA255H1: Statistical Theory",
+            "STA220H1: The Practice of Statistics I",
+            "STA221H1: The Practice of Statistics II",
+            "STA288H1: Data Science I",
+            "BIO230H1: Introduction to Evolutionary and Ecological Genetics",
+            "BIO130H1: Molecular and Cell Biology",
+            "CHM135H1: Introductory Chemistry",
+            "CHM136H1: Organic Chemistry I",
+            "CHM138H1: Introductory Organic Chemistry I",
+            "CHM139H1: Introductory Organic Chemistry II",
+            "CHM151Y1: Chemistry: The Molecular Science",
+            "BIO255H1: Introduction to Molecular Genetics and Genomics",
+            "PSY201H1: Statistics I",
+            "PSY100H1: Introduction to Psychology",
+            "COG250Y1: Introduction to Cognitive Science",
+            "GGR270H1: Quantitative Methods in Geography",
+            "EEB225H1: Mathematical Methods in Ecology and Evolution",
+            "BIO120H1: Adaptation and Biodiversity",
+            "ECO220Y1: Quantitative Methods in Economics",
+            "ECO101H1: Introduction to Microeconomics",
+            "ECO102H1: Introduction to Macroeconomics",
+            "ECO105Y1: Principles of Economics",
+            "STA257H1: Probability and Statistics II",
+            "STA286H1: Statistics for Pharmacology"
+        ]
+
+        for item in expected_visited:
+            capital_case = item[0:-8] + item[-8:].upper()
+            lower_case = item[0:-8] + item[-8:].lower()
+            capital_has_visited = result_visited.get(capital_case, False)
+            lower_has_visited = result_visited.get(lower_case, False)
+
+            self.assertTrue(capital_has_visited or lower_has_visited, f"Should have visited {item} either in upper or lower case")
+            if capital_has_visited:
+                del result_visited[capital_case]
+            else :
+                del result_visited[lower_case]
+
+        for item in result_titles:
+            del result_visited[item]
         
-    # A 300 + 400 level test
-    
+        self.assertTrue(result_visited == {})
+        
+        
+        print(result_visited)
+
 
     # TEST PRE + COR
     # For the request, I am going to do PRE + COR only first.
