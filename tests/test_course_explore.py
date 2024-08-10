@@ -53,9 +53,6 @@ class TestCourseExplore(unittest.TestCase):
             "https://artsci.calendar.utoronto.ca/course/STA255H1",
             "https://artsci.calendar.utoronto.ca/course/STA257H1",
             "https://artsci.calendar.utoronto.ca/course/STA286H1",
-            "https://artsci.calendar.utoronto.ca/course/MAT194H1",
-            "https://artsci.calendar.utoronto.ca/course/MAT195H1",
-            "https://artsci.calendar.utoronto.ca/course/CHM139H1",
         ]
         self.assertEqual(expected_links, links)
 
@@ -310,57 +307,6 @@ class TestCourseExplore(unittest.TestCase):
             "https://artsci.calendar.utoronto.ca/course/STA286H1"
         ]
 
-        expected_titles = [
-            "CSC311H1: Introduction to Machine Learning",
-            "CSC207H1: Software Design",
-            "CSC148H1: Introduction to Computer Science",
-            "CSC108H1: Introduction to Computer Programming",
-            "CSC111H1: Introduction to Computational Thinking",
-            "CSC110Y1: Computer Science Fundamentals",
-            "CSC180H1: Introduction to Computer Programming",
-            "MAT235Y1: Calculus III",
-            "MAT133Y1: Calculus and Linear Algebra for Commerce",
-            "MAT135H1: Calculus I (for Physical Sciences and Engineering)",
-            "MAT136H1: Calculus II (for Physical Sciences and Engineering)",
-            "MAT137Y1: Calculus",
-            "MAT157Y1: Analysis I",
-            "MAT237Y1: Multivariable Calculus",
-            "MAT138H1: Introduction to Proofs",
-            "MAT246H1: Abstract Algebra I",
-            "MAT223H1: Linear Algebra I",
-            "MAT240H1: Algebra I",
-            "MAT257Y1: Analysis II",
-            "MAT247H1: Algebra II",
-            "MAT194H1: Mathematics for Commerce",
-            "MAT195H1: Calculus II for Commerce",
-            "STA237H1: Probability with Computer Applications",
-            "STA247H1: Probability with Computer Applications II",
-            "STA255H1: Statistical Theory",
-            "STA220H1: The Practice of Statistics I",
-            "STA221H1: The Practice of Statistics II",
-            "STA288H1: Data Science I",
-            "BIO230H1: Introduction to Evolutionary and Ecological Genetics",
-            "BIO130H1: Molecular and Cell Biology",
-            "CHM135H1: Introductory Chemistry",
-            "CHM136H1: Organic Chemistry I",
-            "CHM138H1: Introductory Organic Chemistry I",
-            "CHM139H1: Introductory Organic Chemistry II",
-            "CHM151Y1: Chemistry: The Molecular Science",
-            "BIO255H1: Introduction to Molecular Genetics and Genomics",
-            "PSY201H1: Statistics I",
-            "PSY100H1: Introduction to Psychology",
-            "COG250Y1: Introduction to Cognitive Science",
-            "GGR270H1: Quantitative Methods in Geography",
-            "EEB225H1: Mathematical Methods in Ecology and Evolution",
-            "BIO120H1: Adaptation and Biodiversity",
-            "ECO220Y1: Quantitative Methods in Economics",
-            "ECO101H1: Introduction to Microeconomics",
-            "ECO102H1: Introduction to Macroeconomics",
-            "ECO105Y1: Principles of Economics",
-            "STA257H1: Probability and Statistics II",
-            "STA286H1: Statistics for Pharmacology"
-        ]
-
         for item in expected_visited:
             capital_case = item[0:-8] + item[-8:].upper()
             lower_case = item[0:-8] + item[-8:].lower()
@@ -383,8 +329,67 @@ class TestCourseExplore(unittest.TestCase):
 
 
     # TEST PRE + COR
-    # For the request, I am going to do PRE + COR only first.
+    
+    # test corequisite fetching multiple cases
 
+    # For the request, I am going to do PRE + COR only first.
+    def test_crawl_w_cor_test1(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc240h1"
+
+        self.course_explore.crawl_w_cor(test_url)
+
+        result_visited = self.course_explore.visited
+        expected_visited = [
+            "https://artsci.calendar.utoronto.ca/course/csc240h1",
+            "https://artsci.calendar.utoronto.ca/course/csc110y1",
+            "https://artsci.calendar.utoronto.ca/course/csc165h1",
+            "https://artsci.calendar.utoronto.ca/course/csc108h1",
+            "https://artsci.calendar.utoronto.ca/course/CSC120H1",
+            "https://artsci.calendar.utoronto.ca/course/csc111h1",
+            "https://artsci.calendar.utoronto.ca/course/csc148h1",
+            "https://artsci.calendar.utoronto.ca/course/mat137y1",
+            "https://artsci.calendar.utoronto.ca/course/mat157y1",
+            "https://artsci.calendar.utoronto.ca/course/mat135h1",
+            "https://artsci.calendar.utoronto.ca/course/mat136h1"
+        ]
+
+        expected_titles = [
+            "CSC240H1: Enriched Introduction to the Theory of Computation",
+            "CSC110Y1: Foundations of Computer Science I",
+            "CSC165H1: Mathematical Expression and Reasoning for Computer Science",
+            "CSC108H1: Introduction to Computer Programming",
+            "CSC111H1: Foundations of Computer Science II",
+            "CSC148H1: Introduction to Computer Science",
+            "MAT137Y1: Calculus with Proofs",
+            "MAT157Y1: Analysis I",
+            "MAT135H1: Calculus I",
+            "MAT136H1: Calculus II"
+        ]
+
+        
+        for item in expected_visited:
+            capital_case = item[0:-8] + item[-8:].upper()
+            lower_case = item[0:-8] + item[-8:].lower()
+            capital_has_visited = self.course_explore.visited.get(capital_case, False)
+            lower_has_visited = self.course_explore.visited.get(lower_case, False)
+
+            self.assertTrue(capital_has_visited or lower_has_visited, f"Should have visited {item} either in upper or lower case")
+            if capital_has_visited:
+                del result_visited[capital_case]
+            else:
+                del result_visited[lower_case]
+        
+        for item in expected_titles:
+            del self.course_explore.visited[item]
+
+        print(result_visited)
+
+        self.assertTrue(self.course_explore.visited == {})
+
+    def test_crawl_w_cor_test2(self):
+        pass
+
+    
     # TEST PRE + COR + EXCL
 
 

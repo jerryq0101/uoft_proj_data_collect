@@ -111,12 +111,12 @@ class CourseExplore:
                     self.crawl(link)
 
     def crawl_w_cor(self, url):
-        self.visited[url.lower()] = True
+        self.visited[url] = True
 
         # Process Html
         s_html = self.get_html(url)
 
-        # Find title literally
+        # Find title
         title = self.find_title(s_html)
 
         # Valid course operations
@@ -137,13 +137,14 @@ class CourseExplore:
             total_links = pre_links + cor_links
 
             for link in total_links:
-                has_visited = self.visited.get(link, False)
-                if not has_visited:
-                    self.crawl(link)
+                has_visited_capital = self.visited.get(link[0:-8] + link[-8:].upper(), False)
+                has_visited_lower = self.visited.get(link[0:-8] + link[-8:].lower(), False)
+                if not has_visited_capital and not has_visited_lower:
+                    self.crawl_w_cor(link)
 
     # Crawl DFS, but with excl and cor courses (this might be good as a new feature)
     def crawl_w_excl_cor(self, url):
-        self.visited[url.lower()] = True
+        self.visited[url] = True
 
         # Process Html
         s_html = self.get_html(url)
@@ -175,9 +176,10 @@ class CourseExplore:
             total_links = pre_links + excl_links + cor_links
 
             for link in total_links:
-                has_visited = self.visited.get(link, False)
-                if not has_visited:
-                    self.crawl(link)
+                has_visited_capital = self.visited.get(link[0:-8] + link[-8:].upper(), False)
+                has_visited_lower = self.visited.get(link[0:-8] + link[-8:].lower(), False)
+                if not has_visited_capital and not has_visited_lower:
+                    self.crawl_w_excl_cor(link)
 
     # find_pre_links: Find all of the plausible prerequisite links and add them to the list
     def find_pre_links(self, s_html):
@@ -246,6 +248,11 @@ class CourseExplore:
 
 if __name__ == "__main__":
     test = CourseExplore()
-    url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
-    test.crawl(url)
-    test.print_results()
+    url = "https://artsci.calendar.utoronto.ca/course/csc240h1"
+
+    test.crawl_w_cor(url)
+
+    result_visited = test.visited
+    print(result_visited)
+    
+
