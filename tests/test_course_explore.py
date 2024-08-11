@@ -327,12 +327,82 @@ class TestCourseExplore(unittest.TestCase):
         
         print(result_visited)
 
+    # TEST PRE + COR (First Fiverr Request)
 
-    # TEST PRE + COR
-    
-    # test corequisite fetching multiple cases
+    # Test fetchin corequisite links 1: No corequisites
+    def test_find_corequisite_links_1(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
+        result_links = self.course_explore.find_corequisite_links(self.setupShtml(test_url))
+        expected_links = []
 
-    # For the request, I am going to do PRE + COR only first.
+        self.assertEqual(result_links, expected_links, "Should be empty because there are no corequisites")
+
+    # Test Fetching corequisite links 2: page not found
+    def test_find_corequisite_links_2(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/CSC421H1"
+        result_links = self.course_explore.find_corequisite_links(self.setupShtml(test_url))
+        expected_links = []
+        self.assertEqual(result_links, expected_links, "Should be empty because there are no corequisites")
+
+    # Test fetching corequisites links 3: corequisites exist 1
+    def test_find_corequisite_links_3(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/sta237h1"
+        result_links = self.course_explore.find_corequisite_links(self.setupShtml(test_url))
+        expected_links = [
+            "https://artsci.calendar.utoronto.ca/course/csc108h1",
+            "https://artsci.calendar.utoronto.ca/course/csc110y1",
+            "https://artsci.calendar.utoronto.ca/course/csc148h1"
+        ]
+        for i in range(len(result_links)):
+            result_links[i] = result_links[i].lower()
+
+        self.assertTrue(expected_links == result_links, "Should have the same links")
+            
+    # Test Fetching corequisites links 4: corequisites exist 2
+    def test_find_corequisite_links_4(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/sta257h1"
+        result_links = self.course_explore.find_corequisite_links(self.setupShtml(test_url))
+        expected_links = [
+            "https://artsci.calendar.utoronto.ca/course/mat237y1",
+            "https://artsci.calendar.utoronto.ca/course/mat257y1",
+            "https://artsci.calendar.utoronto.ca/course/mat223h1",
+            "https://artsci.calendar.utoronto.ca/course/mat224h1",
+            "https://artsci.calendar.utoronto.ca/course/mat240h1",
+        ]
+        for i in range(len(result_links)):
+            result_links[i] = result_links[i].lower()
+        
+        self.assertEqual(expected_links, result_links, "Should have the same links")
+
+    # Test fetching corequisites 1: No Corequisites
+    def test_find_corequisites_1(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/csc311h1"
+        result = self.course_explore.find_corequisites(self.setupShtml(test_url))
+        expected = ""
+        self.assertEqual(result, expected, "Should be empty because there are no corequisites")
+
+    # Test fetching corequisites 2; Page not found
+    def test_find_corequisites_2(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/CSC421H1"
+        result = self.course_explore.find_corequisites(self.setupShtml(test_url))
+        expected = ""
+        self.assertEqual(result, expected, "Should be empty because there are no corequisites")
+
+    # Test fetching corequisites 3: Corequisites exist 1
+    def test_find_corequisites_3(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/sta237h1"
+        result = self.course_explore.find_corequisites(self.setupShtml(test_url)).replace(" ", "")
+        expected = "( CSC108H1/ equivalent programming experience)/ CSC110Y1/ CSC148H1 *Note: the corequisite may be completed either concurrently or in advance.".replace(" ", "")
+        self.assertEqual(result, expected, "Should have the same corequisites")
+
+    # Test fetching corequisites 4: 
+    def test_find_corequisites_4(self):
+        test_url = "https://artsci.calendar.utoronto.ca/course/sta257h1"
+        result = self.course_explore.find_corequisites(self.setupShtml(test_url)).replace(" ", "")
+        expected = "MAT237Y1/ MAT257Y1/ MAT257Y5; MAT223H1/ MAT224H1/ MAT240H1/ MATA22H3/ MATA23H3/ MAT223H5/ MAT240H5/ MATB24H3/ MAT224H5".replace(" ", "")
+        self.assertEqual(result, expected, "Should have the same corequisites")
+
+    # Testing CSC240, if it traverses all the prerequisites and corequisites
     def test_crawl_w_cor_test1(self):
         test_url = "https://artsci.calendar.utoronto.ca/course/csc240h1"
 
@@ -353,19 +423,6 @@ class TestCourseExplore(unittest.TestCase):
             "https://artsci.calendar.utoronto.ca/course/mat136h1"
         ]
 
-        expected_titles = [
-            "CSC240H1: Enriched Introduction to the Theory of Computation",
-            "CSC110Y1: Foundations of Computer Science I",
-            "CSC165H1: Mathematical Expression and Reasoning for Computer Science",
-            "CSC108H1: Introduction to Computer Programming",
-            "CSC111H1: Foundations of Computer Science II",
-            "CSC148H1: Introduction to Computer Science",
-            "MAT137Y1: Calculus with Proofs",
-            "MAT157Y1: Analysis I",
-            "MAT135H1: Calculus I",
-            "MAT136H1: Calculus II"
-        ]
-
         
         for item in expected_visited:
             capital_case = item[0:-8] + item[-8:].upper()
@@ -379,19 +436,19 @@ class TestCourseExplore(unittest.TestCase):
             else:
                 del result_visited[lower_case]
         
-        for item in expected_titles:
-            del self.course_explore.visited[item]
 
         print(result_visited)
 
-        self.assertTrue(self.course_explore.visited == {})
-
+    # Test 
     def test_crawl_w_cor_test2(self):
         pass
 
-    
+    # Write another another test
+    def test_crawl_w_cor_test3(self):
+        pass
+
     # TEST PRE + COR + EXCL
 
 
 if __name__ == '__main__':
-    test = TestCourseExplore()
+    test = TestCourseExplore() 

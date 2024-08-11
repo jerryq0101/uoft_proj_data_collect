@@ -84,13 +84,18 @@ class FocusExplore:
             link = a_tag.attrs["href"]
 
             is_eng = link[8:11] in eng_courses
+
             if link[0:8] == "/course/" and not is_eng:
-                filtered_links.append(base_url + link)
+                complete_link = base_url + link
+                already_visited = complete_link.lower() in filtered_links
+                if not already_visited:
+                    filtered_links.append(complete_link.lower())
 
         return filtered_links
 
-    def crawl_focus(self, title):
+    def crawl_focus_w_pre(self, title):
         links_arr = self.links_in_focus(title)
+        
         for link in links_arr:
             self.course_explore.crawl(link)
 
@@ -100,10 +105,24 @@ class FocusExplore:
             "prereq_list": self.course_explore.prereq_list
         }
 
+    def crawl_focus_w_cor(self, title):
+        links_arr = self.links_in_focus(title)
+        for link in links_arr:
+            # For each link, check if its visited
+            visited = self.course_explore.visited
+            has_visited_capital = visited.get(link[0:-8] + link[-8:].upper(), False)
+            has_visited_lower = visited.get(link[0:-8] + link[-8:].lower(), False)
+            if not has_visited_capital and not has_visited_lower:
+                self.course_explore.crawl_w_cor(link)
+
+        return {
+            "title_list": self.course_explore.title_list,
+            "prereq_list": self.course_explore.prereq_list,
+            "coreq_list": self.course_explore.coreq_list
+        }
 
 if __name__ == "__main__":
     test = FocusExplore()
-    title = focuses["CS"]
+    title = focuses["ToC"]
     print(test.links_in_focus(title))
 
-    test.crawl_focus(title)

@@ -110,6 +110,7 @@ class CourseExplore:
                 if not has_visited:
                     self.crawl(link)
 
+    # Crawl with prerequisites and corequisites
     def crawl_w_cor(self, url):
         self.visited[url] = True
 
@@ -117,7 +118,7 @@ class CourseExplore:
         s_html = self.get_html(url)
 
         # Find title
-        title = self.find_title(s_html)
+        title = self.find_title(s_html).strip()
 
         # Valid course operations
         if title != "Page not found" and title != "Sorry, this course is not in the current Calendar.":
