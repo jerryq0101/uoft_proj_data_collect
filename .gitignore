@@ -5,3 +5,4 @@ htmlcov
 .python-version
 .idea/
 __pycache__/
+.env
