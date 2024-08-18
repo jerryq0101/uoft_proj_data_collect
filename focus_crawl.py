@@ -121,6 +121,17 @@ class FocusExplore:
             "coreq_list": self.course_explore.coreq_list
         }
 
+    def crawl_focus_w_cor_full(self):
+        # Crawl everything and see if the lengths match up
+        for title in focuses.values():
+            self.crawl_focus_w_cor(title)
+        
+        return {
+            "titles": self.course_explore.title_list,
+            "prereq_list": self.course_explore.prereq_list,
+            "coreq_list": self.course_explore.coreq_list
+        }
+
 if __name__ == "__main__":
     test = FocusExplore()
     title = focuses["ToC"]

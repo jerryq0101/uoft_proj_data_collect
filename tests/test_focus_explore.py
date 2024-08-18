@@ -276,10 +276,8 @@ class TestFocusExplore(unittest.TestCase):
 
         print(self.test.course_explore.visited)
 
-        print(len(title_list))
-        
+        return title_list
 
-        
 if __name__ == "__main__":
     unittest.main()
 
