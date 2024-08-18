@@ -46,10 +46,9 @@ def process_code_coreq(code):
     return code + "_cor"
 
 """
-Checks if course already exists => doesn't do anything
-else => Creates a new course with course code: code, and full name: full_name
+Checks if node exists
 """
-def create_course(tx, code, full_name):
+def check_if_exists(tx, code):
     node_exists = tx.run(
         """
             MATCH (c:Course {code: $code})
@@ -58,6 +57,14 @@ def create_course(tx, code, full_name):
         """,
         code=code
     ).data()[0]['exists']
+    return node_exists
+
+"""
+Checks if course already exists => doesn't do anything
+else => Creates a new course with course code: code, and full name: full_name
+"""
+def create_course(tx, code, full_name):
+    node_exists = check_if_exists(tx, code)
     
     if node_exists:
         return
@@ -68,7 +75,13 @@ def create_course(tx, code, full_name):
         """, code=code, full_name=full_name)
         return result.data()
 
+and_counter = 1
+or_counter = 1
+
 def main():
+    global and_counter
+    global or_counter
+
     # # Testing converting code to variable
     # test_code = process_code_prereq("CSC336H1")
     # pre_list = globals()[test_code]
@@ -98,9 +111,29 @@ def main():
         # Set constraints and indexes from an empty database
 
         with driver.session(database="neo4j") as session:
-            assert (len(all_codes) == len(all_prereq_var_names) == len(all_coreq_var_names)), "Lengths of all_codes, all_prereq_var_names, and all_coreq_var_names should be the same"
+            # assert (len(all_codes) == len(all_prereq_var_names) == len(all_coreq_var_names)), "Lengths of all_codes, all_prereq_var_names, and all_coreq_var_names should be the same"
             
-            
+            # Set initial index counts for the AND and OR blocks, so that when adding mid way there are no issues.
+            result = driver.execute_query("""
+                MATCH (and:AND), (or:OR)
+                RETURN max(and.index) AS max_and_index, max(or.index) AS max_or_index
+            """)
+
+            # Process the result to get the maximum indexes
+            for record in result.records:
+                max_and_index = record["max_and_index"]
+                max_or_index = record["max_or_index"]
+                # Set and_counter and or_counter to the max indexes
+                if max_and_index is not None:
+                    and_counter = max_and_index + 1
+                elif max_and_index is None:
+                    and_counter = 1
+                if max_or_index is not None:
+                    or_counter = max_or_index + 1
+                elif max_or_index is None:
+                    or_counter = 1
+                print(f"Max AND index: {max_and_index}, Max OR index: {max_or_index}")
+
             # # Top Level
             # for i in range(len(all_codes)):
             #     capital_course_code = all_codes[i]
@@ -113,14 +146,49 @@ def main():
             #     # Add obj and a containment relationship to the current node
             #     add_to_this_course(obj, all_codes[i])
             
-            # Test single variable to see it works expectedly
-            current_pre_list_1 = globals()[all_prereq_var_names[0]]
-            obj_1 = build_graph(current_pre_list_1, session, "CSC336H1")
-            session.execute_write(add_to_this_course, obj_1, "CSC336H1", titles_dict["CSC336H1"])
+            # # Test single variable to see it works expectedly
+        
+            # current_pre_list_1 = globals()["csc336h1_pre"]
+            # obj_1 = build_graph(current_pre_list_1, session, "CSC336H1")
+            # session.execute_write(add_to_this_course, obj_1, "CSC336H1", titles_dict["CSC336H1"])
 
-            current_pre_list_2 = globals()["mat235y1_pre"]
-            obj_2 = build_graph(current_pre_list_2, session, "MAT235Y1")
-            session.execute_write(add_to_this_course, obj_2, "MAT235Y1", titles_dict["MAT235Y1"])
+            # current_pre_list_2 = globals()["mat235y1_pre"]
+            # obj_2 = build_graph(current_pre_list_2, session, "MAT235Y1")
+            # session.execute_write(add_to_this_course, obj_2, "MAT235Y1", titles_dict["MAT235Y1"])
+
+            # current_pre_list_3 = globals()["csc320h1_pre"]
+            # obj_3 = build_graph(current_pre_list_3, session, "CSC320H1")
+            # session.execute_write(add_to_this_course, obj_3, "CSC320H1", titles_dict["CSC320H1"])
+
+            # current_pre_list_4 = globals()["csc263h1_pre"]
+            # obj_4 = build_graph(current_pre_list_4, session, "CSC263H1")
+            # session.execute_write(add_to_this_course, obj_4, "CSC263H1", titles_dict["CSC263H1"])
+
+            five = session.execute_read(already_loaded_with_prerequisites, "CSC236H1")
+            if not five:
+                current_pre_list_5 = globals()["csc236h1_pre"]
+                obj_5 = build_graph(current_pre_list_5, session, "CSC236H1")
+                session.execute_write(add_to_this_course, obj_5, "CSC236H1", titles_dict["CSC236H1"])
+
+"""
+Checks if course exists,
+Then checks if a specific relationship that indicates the course is already loaded with prerequisites exists
+"""
+def already_loaded_with_prerequisites(tx, code):
+    node_exists = check_if_exists(tx, code)
+    if node_exists:
+        relationship_exists = tx.run(
+            """
+                MATCH (c:Course {code: $code})-[:Contains {root: $code}]->(and:AND)
+                WITH COUNT(and) > 0 as exists
+                RETURN exists
+            """,
+            code=code
+        ).data()[0]['exists']
+        return relationship_exists
+    else:
+        return False
+
 
 
 def add_to_this_course(tx, obj, code, full_title):
@@ -161,9 +229,6 @@ def add_to_this_course(tx, obj, code, full_title):
             full_title=full_title
         )
 
-
-and_counter = 1
-or_counter = 1
 
 def build_graph(item, session, relationship_code):
     global or_counter

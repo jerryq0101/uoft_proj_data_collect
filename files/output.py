@@ -423,15 +423,13 @@ csc485h1_cor = []
 
 csc320h1_pre = [
     ("CSC263H1", "CSC265H1"),
-    ("MAT223", "MAT240H1"),
+    ("MAT223H1", "MAT240H1"),
     ({"code": "MAT136H1", "min_req": "77%"},
      {"code": "MAT137Y1", "min_req": "73%"}, 
      {"code": "MAT157Y1", "min_req": "67%"},
      "MAT235Y1",
      "MAT237Y1",
      "MAT257Y1",
-     "MAT291H1",
-     "MAT292H1",
     )
 ]
 csc320h1_cor = []
