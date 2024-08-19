@@ -56,7 +56,7 @@ mat223h1_cor = []
 
 mat240h1_pre = []
 mat240h1_cor = [
-    "MAT157H1"
+    "MAT157Y1"
 ]
 
 mat235y1_pre = [
@@ -114,7 +114,7 @@ mat247h1_pre = [
     "MAT240H1"
 ]
 mat247h1_cor = [
-    "MAT157H1"
+    "MAT157Y1"
 ]
 
 apm236h1_pre = [
@@ -141,7 +141,7 @@ mat247h1_pre = [
     "MAT240H1"
 ]
 mat247h1_cor = [
-    "MAT157H1"
+    "MAT157Y1"
 ]
 
 sta238h1_pre = [
@@ -262,27 +262,27 @@ chm151y1_cor = [
 
 phy131h1_pre = []
 phy131h1_cor = [
-    ("MAT135H1", "MAT137H1", "MAT157H1")
+    ("MAT135H1", "MAT137Y1", "MAT157Y1")
 ]
 
 phy132h1_pre = [
     ("PHY131H1", "PHY151H1")
 ]
 phy132h1_cor = [
-    ("MAT136H1", "MAT137H1", "MAT157H1")
+    ("MAT136H1", "MAT137Y1", "MAT157Y1")
 ]
 
 # Special Note Prerequisite: MCV4U Calculus & Vectors / MCB4U Functions & Calculus; SPH4U Physics
 phy151h1_pre = []
 phy151h1_cor = [
-    ("MAT137H1", "MAT157H1")
+    ("MAT137Y1", "MAT157Y1")
 ]
 
 phy152h1_pre = [
     ("PHY131H1", "PHY151H1", "PHY180H1")
 ]
 phy152h1_cor = [
-    ("MAT137H1", "MAT157H1")
+    ("MAT137Y1", "MAT157Y1")
 ]
 
 # Special note: cGPA > 3.0
@@ -463,7 +463,7 @@ csc240h1_pre = [
 ]
 csc240h1_cor = [
     ("CSC111H1", "CSC148H1"),
-    ("MAT137H1", "MAT157H1")
+    ("MAT137Y1", "MAT157Y1")
 ]
 
 # Notes: Students who have completed  CSC240H1 must enrol in  MAT377H1/  STA237H1/  STA247H1/  STA255H1/  STA257H1 concurrently with  CSC265H1, if they have not already completed one of those courses. Students who have completed additional 200- or 300-level Mathematics courses may submit a prerequisite waiver request for permission to complete the statistics requirement as a co-requisite or to consider other courses as appropriate preparation for  CSC265H1.
@@ -1262,3 +1262,8 @@ mat344h1_pre = [
     ("MAT223H1", "MAT240H1")
 ]
 mat344h1_cor = []
+
+
+
+output_titles_dict = {'CSC336H1': 'CSC336H1: Numerical Methods', 'CSC148H1': 'CSC148H1: Introduction to Computer Science', 'CSC108H1': 'CSC108H1: Introduction to Computer Programming', 'CSC111H1': 'CSC111H1: Foundations of Computer Science II', 'CSC110Y1': 'CSC110Y1: Foundations of Computer Science I', 'MAT133Y1': 'MAT133Y1: Calculus and Linear Algebra for Commerce', 'MAT135H1': 'MAT135H1: Calculus I', 'MAT136H1': 'MAT136H1: Calculus II', 'MAT137Y1': 'MAT137Y1: Calculus with Proofs', 'MAT157Y1': 'MAT157Y1: Analysis I', 'MAT223H1': 'MAT223H1: Linear Algebra I', 'MAT240H1': 'MAT240H1: Algebra I', 'MAT235Y1': 'MAT235Y1: Multivariable Calculus', 'MAT237Y1': 'MAT237Y1: Multivariable Calculus with Proofs', 'MAT138H1': 'MAT138H1: Introduction to Proofs', 'MAT246H1': 'MAT246H1: Concepts in Abstract Mathematics', 'MAT257Y1': 'MAT257Y1: Analysis II', 'MAT247H1': 'MAT247H1: Algebra II', 'APM236H1': 'APM236H1: Applications of Linear Programming', 'MAT221H1': 'MAT221H1: Applied Linear Algebra', 'MAT224H1': 'MAT224H1: Linear Algebra II', 'STA238H1': 'STA238H1: Probability, Statistics and Data Analysis II', 'STA237H1': 'STA237H1: Probability, Statistics and Data Analysis I', 'STA247H1': 'STA247H1: Probability with Computer Applications', 'STA257H1': 'STA257H1: Probability and Statistics I', 'STA248H1': 'STA248H1: Statistics for Computer Scientists', 'STA261H1': 'STA261H1: Probability and Statistics II', 'STA302H1': 'STA302H1: Methods of Data Analysis I', 'STA255H1': 'STA255H1: Statistical Theory', 'STA220H1': 'STA220H1: The Practice of Statistics I', 'STA221H1': 'STA221H1: The Practice of Statistics II', 'STA288H1': 'STA288H1: Statistics and Scientific Inquiry in the Life Sciences', 'BIO230H1': 'BIO230H1: From Genes to Organisms', 'BIO130H1': 'BIO130H1: Molecular and Cell Biology', 'CHM135H1': 'CHM135H1: Chemistry: Physical Principles', 'CHM136H1': 'CHM136H1: Introductory Organic Chemistry I', 'CHM151Y1': 'CHM151Y1: Chemistry: The Molecular Science', 'PHY131H1': 'PHY131H1: Introduction to Physics I', 'PHY132H1': 'PHY132H1: Introduction to Physics II', 'PHY151H1': 'PHY151H1: Foundations of Physics I', 'PHY152H1': 'PHY152H1: Foundations of Physics II', 'BIO255H1': 'BIO255H1: From Genes to Organisms with Advanced Laboratory', 'PSY201H1': 'PSY201H1: Statistics I', 'PSY100H1': 'PSY100H1: Introductory Psychology', 'COG250Y1': 'COG250Y1: Introduction to Cognitive Science', 'GGR270H1': 'GGR270H1: Introductory Analytical Methods', 'EEB225H1': 'EEB225H1: Biostatistics for Biological Sciences', 'BIO120H1': 'BIO120H1: Adaptation and Biodiversity', 'ECO220Y1': 'ECO220Y1: Introduction to Data Analysis and Applied Econometrics', 'ECO101H1': 'ECO101H1: Principles of Microeconomics', 'ECO102H1': 'ECO102H1: Principles of Macroeconomics', 'ECO105Y1': 'ECO105Y1: Principles of Economics for Non-Specialists', 'ECO227Y1': 'ECO227Y1: Foundations of Econometrics', 'ECO210H1': 'ECO210H1: Mathematical Methods for Economic Theory', 'STA347H1': 'STA347H1: Probability', 'CSC401H1': 'CSC401H1: Natural Language Computing', 'CSC207H1': 'CSC207H1: Software Design', 'CSC209H1': 'CSC209H1: Software Tools and Systems Programming', 'CSC485H1': 'CSC485H1: Computational Linguistics', 'CSC320H1': 'CSC320H1: Introduction to Visual Computing', 'CSC263H1': 'CSC263H1: Data Structures and Analysis', 'CSC236H1': 'CSC236H1: Introduction to the Theory of Computation', 'CSC165H1': 'CSC165H1: Mathematical Expression and Reasoning for Computer Science', 'CSC240H1': 'CSC240H1: Enriched Introduction to the Theory of Computation', 'CSC265H1': 'CSC265H1: Enriched Data Structures and Analysis', 'MAT377H1': 'MAT377H1: Mathematical Probability Theory', 'CSC420H1': 'CSC420H1: Introduction to Image Understanding', 'MAT194H1': 'MAT194H1: Mathematical Personalities', 'MAT195H1': 'MAT195H1: Mathematics as an Interdisciplinary Pursuit', 'CSC311H1': 'CSC311H1: Introduction to Machine Learning', 'CSC413H1': 'CSC413H1: Neural Networks and Deep Learning', 'STA314H1': 'STA314H1: Statistical Methods for Machine Learning I', 'CSC412H1': 'CSC412H1: Probabilistic Learning and Reasoning', 'STA414H1': 'STA414H1: Statistical Methods for Machine Learning II', 'CSC304H1': 'CSC304H1: Algorithmic Game Theory and Mechanism Design', 'CSC384H1': 'CSC384H1: Introduction to Artificial Intelligence', 'CSC486H1': 'CSC486H1: Knowledge Representation and Reasoning', 'CSC324H1': 'CSC324H1: Principles of Programming Languages', 'PSY270H1': 'PSY270H1: Introduction to Cognitive Psychology', 'PHL232H1': 'PHL232H1: Knowledge and Reality', 'PHL342H1': 'PHL342H1: Minds and Machines', 'CSC318H1': 'CSC318H1: The Design of Interactive Computational Media', 'LIN101H1': 'LIN101H1: Introduction to Linguistics: Sound Structure', 'LIN200H1': 'LIN200H1: Introduction to Language', 'CSC309H1': 'CSC309H1: Programming on the Web', 'CSC428H1': 'CSC428H1: Human-Computer Interaction', 'CSC343H1': 'CSC343H1: Introduction to Databases', 'CSC367H1': 'CSC367H1: Parallel Programming', 'CSC258H1': 'CSC258H1: Computer Organization', 'CSC369H1': 'CSC369H1: Operating Systems', 'CSC457H1': 'CSC457H1: Principles of Computer Networks', 'CSC373H1': 'CSC373H1: Algorithm Design, Analysis & Complexity', 'CSC458H1': 'CSC458H1: Computer Networking Systems', 'CSC368H1': 'CSC368H1: Computer Architecture', 'CSC385H1': 'CSC385H1: Microprocessor Systems', 'CSC443H1': 'CSC443H1: Database System Technology', 'CSC469H1': 'CSC469H1: Operating Systems Design and Implementation', 'CSC488H1': 'CSC488H1: Compilers and Interpreters', 'CSC301H1': 'CSC301H1: Introduction to Software Engineering', 'CSC410H1': 'CSC410H1: Software Testing and Verification', 'CSC417H1': 'CSC417H1: Physics-Based Animation', 'CSC317H1': 'CSC317H1: Computer Graphics', 'CSC419H1': 'CSC419H1: Geometry Processing', 'APM462H1': 'APM462H1: Nonlinear Optimization', 'PHY385H1': 'PHY385H1: Introductory Optics', 'PHY250H1': 'PHY250H1: Electricity and Magnetism', 'PHY224H1': 'PHY224H1: Practical Physics I', 'PHY231H1': 'PHY231H1: Physics of Living Systems', 'PHY252H1': 'PHY252H1: Thermal Physics', 'PHY254H1': 'PHY254H1: Classical Mechanics', 'PHY256H1': 'PHY256H1: Introduction to Quantum Physics', 'PSL440Y1': 'PSL440Y1: Neuroscience: Systems and Behaviour', 'PSL300H1': 'PSL300H1: Human Physiology I', 'PSY290H1': 'PSY290H1: Behavioural Neuroscience', 'PSY280H1': 'PSY280H1: Introduction to Sensation and Perception', 'CSC300H1': 'CSC300H1: Computers and Society', 'CSC404H1': 'CSC404H1: Introduction to Video Game Design', 'CSC303H1': 'CSC303H1: Social and Information Networks', 'MUS300H1': 'MUS300H1: Music, Media and Technology', 'CIN212H1': 'CIN212H1: Cinema and Sensation I: Action/Spectacle', 'CIN432H1': 'CIN432H1: Advanced Study in Cinema as Social and Cultural Practice', 'CIN105Y1': 'CIN105Y1: Introduction to Film Study', 'CIN201Y1': 'CIN201Y1: Film Cultures I: Art and Industry', 'CIN301Y1': 'CIN301Y1: Film Cultures II: Politics and Global Media', 'ENG235H1': 'ENG235H1: The Graphic Novel', 'ECO326H1': 'ECO326H1: Advanced Microeconomics - Game Theory', 'ECO200Y1': 'ECO200Y1: Microeconomic Theory', 'ECO204Y1': 'ECO204Y1: Microeconomic Theory and Applications (for Commerce)', 'ECO206Y1': 'ECO206Y1: Microeconomic Theory', 'RSM482H1': 'RSM482H1: Game Theory for Business Strategy', 'SOC204H1': 'SOC204H1: Introduction to Qualitative Methods in Sociology', 'SOC100H1': 'SOC100H1: Introduction to Sociology I: Sociological Perspectives', 'SOC150H1': 'SOC150H1: Introduction to Sociology II: Sociological Inquiries', 'CSC302H1': 'CSC302H1: Engineering Large Software Systems', 'CSC316H1': 'CSC316H1: Data Visualization: Foundations and Advanced Programming', 'CSC454H1': 'CSC454H1: The Business of Software', 'STA313H1': 'STA313H1: Data Visualization', 'ENV281H1': 'ENV281H1: Special Topics in Environment', 'ENV381H1': 'ENV381H1: Special Topics in Environment', 'IRE260H1': 'IRE260H1: Organizational Behaviour', 'COG260H1': 'COG260H1: Data, Computation, and the Mind', 'COG341H1': 'COG341H1: Issues in Cognitive Science I: Attention, Perception, and Consciousness', 'COG343H1': 'COG343H1: Issues in Cognitive Science III: Computational Cognition', 'COG344H1': 'COG344H1: Issues in Cognitive Science IV: Language and Communication', 'LIN232H1': 'LIN232H1: Syntactic Patterns in Language', 'LIN102H1': 'LIN102H1: Introduction to Linguistics: Sentence Structure and Meaning', 'LIN241H1': 'LIN241H1: Introduction to Semantics', 'JLP315H1': 'JLP315H1: Language Acquisition', 'JLP374H1': 'JLP374H1: Psychology of Language', 'LIN228H1': 'LIN228H1: Phonetics', 'LIN229H1': 'LIN229H1: Phonological Patterns in Language', 'PSY260H1': 'PSY260H1: Introduction to Learning and Plasticity', 'CSC436H1': 'CSC436H1: Numerical Algorithms', 'CSC446H1': 'CSC446H1: Computational Methods for Partial Differential Equations', 'APM346H1': 'APM346H1: Partial Differential Equations', 'MAT244H1': 'MAT244H1: Introduction to Ordinary Differential Equations', 'MAT267H1': 'MAT267H1: Advanced Ordinary Differential Equations', 'MAT351Y1': 'MAT351Y1: Partial Differential Equations', 'CSC456H1': 'CSC456H1: High-Performance Scientific Computing', 'CSC466H1': 'CSC466H1: Numerical Methods for Optimization Problems', 'MAT334H1': 'MAT334H1: Complex Variables', 'MAT354H1': 'MAT354H1: Complex Analysis I', 'MAT337H1': 'MAT337H1: Introduction to Real Analysis', 'MAT357H1': 'MAT357H1: Foundations of Real Analysis', 'CSC308H1': 'CSC308H1: Technology Leadership', 'CSC490H1': 'CSC490H1: Capstone Design Project', 'CSC491H1': 'CSC491H1: Capstone Design Project', 'CSC494H1': 'CSC494H1: Computer Science Project', 'CSC495H1': 'CSC495H1: Computer Science Project', 'CSC494Y1': 'CSC494Y1: Computer Science Project', 'CSC463H1': 'CSC463H1: Computational Complexity and Computability', 'CSC310H1': 'CSC310H1: Information Theory', 'CSC438H1': 'CSC438H1: Computability and Logic', 'MAT309H1': 'MAT309H1: Introduction to Mathematical Logic', 'CSC448H1': 'CSC448H1: Formal Languages and Automata', 'CSC473H1': 'CSC473H1: Advanced Algorithm Design', 'MAT332H1': 'MAT332H1: Introduction to Graph Theory', 'MAT344H1': 'MAT344H1: Introduction to Combinatorics'}
+output_codes = ['CSC336H1', 'CSC148H1', 'CSC108H1', 'CSC111H1', 'CSC110Y1', 'MAT133Y1', 'MAT135H1', 'MAT136H1', 'MAT137Y1', 'MAT157Y1', 'MAT223H1', 'MAT240H1', 'MAT235Y1', 'MAT237Y1', 'MAT138H1', 'MAT246H1', 'MAT257Y1', 'MAT247H1', 'APM236H1', 'MAT221H1', 'MAT224H1', 'STA238H1', 'STA237H1', 'STA247H1', 'STA257H1', 'STA248H1', 'STA261H1', 'STA302H1', 'STA255H1', 'STA220H1', 'STA221H1', 'STA288H1', 'BIO230H1', 'BIO130H1', 'CHM135H1', 'CHM136H1', 'CHM151Y1', 'PHY131H1', 'PHY132H1', 'PHY151H1', 'PHY152H1', 'BIO255H1', 'PSY201H1', 'PSY100H1', 'COG250Y1', 'GGR270H1', 'EEB225H1', 'BIO120H1', 'ECO220Y1', 'ECO101H1', 'ECO102H1', 'ECO105Y1', 'ECO227Y1', 'ECO210H1', 'STA347H1', 'CSC401H1', 'CSC207H1', 'CSC209H1', 'CSC485H1', 'CSC320H1', 'CSC263H1', 'CSC236H1', 'CSC165H1', 'CSC240H1', 'CSC265H1', 'MAT377H1', 'CSC420H1', 'MAT194H1', 'MAT195H1', 'CSC311H1', 'CSC413H1', 'STA314H1', 'CSC412H1', 'STA414H1', 'CSC304H1', 'CSC384H1', 'CSC486H1', 'CSC324H1', 'PSY270H1', 'PHL232H1', 'PHL342H1', 'CSC318H1', 'LIN101H1', 'LIN200H1', 'CSC309H1', 'CSC428H1', 'CSC343H1', 'CSC367H1', 'CSC258H1', 'CSC369H1', 'CSC457H1', 'CSC373H1', 'CSC458H1', 'CSC368H1', 'CSC385H1', 'CSC443H1', 'CSC469H1', 'CSC488H1', 'CSC301H1', 'CSC410H1', 'CSC417H1', 'CSC317H1', 'CSC419H1', 'APM462H1', 'PHY385H1', 'PHY250H1', 'PHY224H1', 'PHY231H1', 'PHY252H1', 'PHY254H1', 'PHY256H1', 'PSL440Y1', 'PSL300H1', 'PSY290H1', 'PSY280H1', 'CSC300H1', 'CSC404H1', 'CSC303H1', 'MUS300H1', 'CIN212H1', 'CIN432H1', 'CIN105Y1', 'CIN201Y1', 'CIN301Y1', 'ENG235H1', 'ECO326H1', 'ECO200Y1', 'ECO204Y1', 'ECO206Y1', 'RSM482H1', 'SOC204H1', 'SOC100H1', 'SOC150H1', 'CSC302H1', 'CSC316H1', 'CSC454H1', 'STA313H1', 'ENV281H1', 'ENV381H1', 'IRE260H1', 'COG260H1', 'COG341H1', 'COG343H1', 'COG344H1', 'LIN232H1', 'LIN102H1', 'LIN241H1', 'JLP315H1', 'JLP374H1', 'LIN228H1', 'LIN229H1', 'PSY260H1', 'CSC436H1', 'CSC446H1', 'APM346H1', 'MAT244H1', 'MAT267H1', 'MAT351Y1', 'CSC456H1', 'CSC466H1', 'MAT334H1', 'MAT354H1', 'MAT337H1', 'MAT357H1', 'CSC308H1', 'CSC490H1', 'CSC491H1', 'CSC494H1', 'CSC495H1', 'CSC494Y1', 'CSC463H1', 'CSC310H1', 'CSC438H1', 'MAT309H1', 'CSC448H1', 'CSC473H1', 'MAT332H1', 'MAT344H1']
