@@ -888,3 +888,1783 @@ Prerequisite: MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5
 Corequisite: 
 
 
+Title: CSC336H1: Numerical Methods
+Prerequisite: CSC148H1/  CSC111H1;  MAT133Y1(70%)/ ( MAT135H1,  MAT136H1)/  MAT135Y1/  MAT137Y1/  MAT157Y1,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: CSC148H1: Introduction to Computer Science
+Prerequisite: CSC108H1/ (equivalent programming experience)
+Corequisite: 
+
+
+Title: CSC108H1: Introduction to Computer Programming
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC111H1: Foundations of Computer Science II
+Prerequisite: CSC110Y1 (70% or higher)
+Corequisite: 
+
+
+Title: CSC110Y1: Foundations of Computer Science I
+Prerequisite: 
+Corequisite: 
+
+
+Title: MAT133Y1: Calculus and Linear Algebra for Commerce
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT135H1: Calculus I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT136H1: Calculus II
+Prerequisite: MAT135H1/  MAT135H5/  MATA30H3/  MATA31H3/ APS162H1/ ESC194H1/ MAT186H1/ MAT196H1
+Corequisite: 
+
+
+Title: MAT137Y1: Calculus with Proofs
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT157Y1: Analysis I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT223H1: Linear Algebra I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT240H1: Algebra I
+Prerequisite: High school level calculus
+Corequisite: MAT157Y1
+
+
+Title: MAT235Y1: Multivariable Calculus
+Prerequisite: MAT133Y1/  MAT133Y5/ ( MATA32H3,  MATA33H3)/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3/ MATA37H3)/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5) 
+Corequisite: 
+
+
+Title: MAT237Y1: Multivariable Calculus with Proofs
+Prerequisite: [ MAT133Y1/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3),  MAT138H1/  MAT102H5/  MAT246H1]/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/ ( MATA30H3/  MATA31H3,  MATA37H3)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5),  MAT223H1/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT138H1: Introduction to Proofs
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT246H1: Concepts in Abstract Mathematics
+Prerequisite: MAT133Y1/  MAT133Y5/ ( MATA32H3,  MATA33H3)/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3/  MATA37H3)/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5),  MAT223H1/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT257Y1: Analysis II
+Prerequisite: MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5,  MAT247H1/  MAT247H5
+Corequisite: 
+
+
+Title: MAT247H1: Algebra II
+Prerequisite: MAT240H1/  MAT240H5
+Corequisite: MAT157Y1
+
+
+Title: APM236H1: Applications of Linear Programming
+Prerequisite: MAT221H1/  MAT223H1/  MAT223H5/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT221H1: Applied Linear Algebra
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT224H1: Linear Algebra II
+Prerequisite: MAT221H1(80%)/ MAT223H1/ MAT223H5/  MATA22H3/  MATA23H3/  MAT240H1/ MAT240H5
+Corequisite: 
+
+
+Title: STA238H1: Probability, Statistics and Data Analysis II
+Prerequisite: STA237H1/  STA247H1/  STA257H1/  STAB52H3/  STA256H5
+Corequisite: CSC108H1/  CSC110Y1/  CSC148H1 *Note: the corequisite may be completed either concurrently or in advance.
+
+
+Title: STA237H1: Probability, Statistics and Data Analysis I
+Prerequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ ( MATA30H3,  MATA36H3)/ ( MATA31H3,  MATA37H3)/ ( MAT135H5,  MAT136H5)/  MAT137Y5/  MAT157Y5
+Corequisite: ( CSC108H1/ equivalent programming experience)/  CSC110Y1/  CSC148H1 *Note: the corequisite may be completed either concurrently or in advance.
+
+
+Title: STA247H1: Probability with Computer Applications
+Prerequisite: ( MAT135H1,  MAT136H1)/ MAT137Y1/ MAT157Y1/( MATA30H3,  MATA36H3)/( MATA31H3,  MATA37H3)/( MAT135H5,  MAT136H5)/ MAT137Y5/ MAT157Y5;  CSC111H1/ CSC148H1/ CSCA48H3/ CSC148H5
+Corequisite: 
+
+
+Title: STA257H1: Probability and Statistics I
+Prerequisite: MAT137Y1/  MAT157Y1/ ( MATA31H3,  MATA37H3)/  MAT137Y5/  MAT157Y5
+Corequisite: MAT237Y1/  MAT257Y1/  MAT257Y5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+
+
+Title: STA248H1: Statistics for Computer Scientists
+Prerequisite: STA237H1/ STA247H1/ STA257H1/ STA256H5/ STAB52H3;  CSC111H1/ CSC148H1/ CSCA48H3/ CSC148H5
+Corequisite: 
+
+
+Title: STA261H1: Probability and Statistics II
+Prerequisite: STA257H1/  STAB52H3/  STA256H5
+Corequisite: MAT237Y1/  MAT257Y1/  MAT257Y5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+
+
+Title: STA302H1: Methods of Data Analysis I
+Prerequisite: STA238H1/  STA248H1/  STA255H1/  STA261H1/  ECO227Y1/  STAB57H3/  STA258H5/  STA260H5/  ECO227Y5;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA20H3/  CSCA48H3/  CSC108H5/  CSC148H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+Corequisite: 
+
+
+Title: STA255H1: Statistical Theory
+Prerequisite: STA220H1/  STA221H1/  STA288H1/  ECO220Y1 (note:  ECO220Y1 may be taken as a co-requisite)/  STAB22H3/  STA220H5/  ECO220Y5;  MAT133Y1 (70%)/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ ( MATA32H3 (70%),  MATA33H3 (70%))/ ( MATA29H3 (70%),  MATA35H3 (70%))/ ( MATA30H3,  MATA36H3)/ ( MATA31H3,  MATA37H3)/  MAT133Y5 (70%)/ ( MAT132H5 (70%),  MAT134H5 (70%))/ ( MAT135H5, MAT136H5)/  MAT137Y5/  MAT157Y5
+Corequisite: 
+
+
+Title: STA220H1: The Practice of Statistics I
+Prerequisite: 
+Corequisite: 
+
+
+Title: STA221H1: The Practice of Statistics II
+Prerequisite: STA220H1/  STA288H1/  PSY201H1/  GGR270H1/  EEB225H1/  STAB22H3/  STA220H5
+Corequisite: 
+
+
+Title: STA288H1: Statistics and Scientific Inquiry in the Life Sciences
+Prerequisite: BIO230H1/ BIO255H1
+Corequisite: 
+
+
+Title: BIO230H1: From Genes to Organisms
+Prerequisite: BIO130H1, ( CHM135H1,  CHM136H1)/( CHM138H1,  CHM139H1)/ CHM151Y1
+Corequisite: 
+
+
+Title: BIO130H1: Molecular and Cell Biology
+Prerequisite: SBI4U and SCH4U (Grade 12 University Preparation Biology and Chemistry) or permission of department. Please contact bio130@utoronto.ca for more information.
+Corequisite: 
+
+
+Title: CHM135H1: Chemistry: Physical Principles
+Prerequisite: Chemistry SCH4U, Mathematics MHF4U + MCV4U
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1 recommended but may be required for further Chemistry courses 
+
+
+Title: CHM136H1: Introductory Organic Chemistry I
+Prerequisite: CHM135H1
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1 recommended but may be required for further Chemistry courses
+
+
+Title: CHM151Y1: Chemistry: The Molecular Science
+Prerequisite: Chemistry SCH4U, Mathematics MHF4U + MCV4U; Physics SPH4U recommended
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1; ( PHY131H1,  PHY132H1)/ ( PHY151H1,  PHY152H1) recommended, but may be required for further Chemistry courses
+
+
+Title: PHY131H1: Introduction to Physics I
+Prerequisite: 
+Corequisite: MAT135H1/  MAT137Y1/  MAT157Y1 recommended
+
+
+Title: PHY132H1: Introduction to Physics II
+Prerequisite: PHY131H1/  PHY151H1
+Corequisite: MAT136H1/  MAT137Y1/  MAT157Y1 recommended
+
+
+Title: PHY151H1: Foundations of Physics I
+Prerequisite: MCV4U Calculus & Vectors / MCB4U Functions & Calculus; SPH4U Physics
+Corequisite: MAT137Y1/ MAT157Y1
+
+
+Title: PHY152H1: Foundations of Physics II
+Prerequisite: PHY131H1/ PHY151H1/ PHY180H1
+Corequisite: MAT137Y1/ MAT157Y1
+
+
+Title: BIO255H1: From Genes to Organisms with Advanced Laboratory
+Prerequisite: BIO130H1, ( CHM135H1,  CHM136H1)/( CHM138H1,  CHM139H1)/ CHM151Y1, cGPA 3.0
+Corequisite: 
+
+
+Title: PSY201H1: Statistics I
+Prerequisite: PSY100H1/  PSY100Y5/ ( PSYA01H3 and  PSYA02H3)/  COG250Y1
+Corequisite: 
+
+
+Title: PSY100H1: Introductory Psychology
+Prerequisite: 
+Corequisite: 
+
+
+Title: COG250Y1: Introduction to Cognitive Science
+Prerequisite: 
+Corequisite: 
+
+
+Title: GGR270H1: Introductory Analytical Methods
+Prerequisite: 
+Corequisite: 
+
+
+Title: EEB225H1: Biostatistics for Biological Sciences
+Prerequisite: BIO120H1
+Corequisite: 
+
+
+Title: BIO120H1: Adaptation and Biodiversity
+Prerequisite: Grade 12 Biology or equivalent. Students without high school Biology must consult the BIO120 Office (bio120@utoronto.ca)
+Corequisite: 
+
+
+Title: ECO220Y1: Introduction to Data Analysis and Applied Econometrics
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3(67%),  MGEA06H3 (67%));  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO101H1: Principles of Microeconomics
+Prerequisite: 
+Corequisite: 
+
+
+Title: ECO102H1: Principles of Macroeconomics
+Prerequisite: ECO101H1/  ECO101H5/  MGEA02H3
+Corequisite: 
+
+
+Title: ECO105Y1: Principles of Economics for Non-Specialists
+Prerequisite: 
+Corequisite: 
+
+
+Title: ECO227Y1: Foundations of Econometrics
+Prerequisite: ( ECO101H1(70%),  ECO102H1(70%))/  ECO100Y5(70%)/ ( ECO101H5(70%),  ECO102H5(70%))/ ( MGEA02H3(70%),  MGEA06H3(70%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: Recommended:  MAT223H1/  MAT240H1,  MAT235Y1/  MAT237Y1/  ECO210H1
+
+
+Title: ECO210H1: Mathematical Methods for Economic Theory
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3 (67%),  MGEA06H3 (67%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: 
+
+
+Title: STA347H1: Probability
+Prerequisite: STA247H1(70%)/  STA255H1(70%)/  STA237H1(70%)/  STA257H1/  ECO227Y1/  STAB52H3/  STA256H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5) (Note:  STA257H1,  MAT223H1/ MAT240H1,  MAT237Y1/ MAT257Y1 are very strongly recommended)
+Corequisite: 
+
+
+Title: CSC401H1: Natural Language Computing
+Prerequisite: CSC207H1/  CSC209H1/  CSC207H5/  CSCB07H3/  CSC209H5/  CSCB09H3/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  STA237H1/  STA247H1/​  STA255H1/ ​ STA257H1/  STAB57H3/  STAB52H3/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC207H1: Software Design
+Prerequisite: 60% or higher in  CSC148H1/ 60% or higher in  CSC111H1
+Corequisite: 
+
+
+Title: CSC209H1: Software Tools and Systems Programming
+Prerequisite: CSC207H1/  CSC207H5/  CSCB07H3
+Corequisite: 
+
+
+Title: CSC485H1: Computational Linguistics
+Prerequisite: CSC209H1/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  STA237H1/  STA247H1/​  STA255H1/ ​ STA257H1/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC320H1: Introduction to Visual Computing
+Prerequisite: CSC263H1/  CSC265H1/ ECE345H1/ ECE358H1/  MIE335H1,  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1, (  MAT136H1 with a minimum mark of 77)/ ( MAT137Y1 with a minimum mark of 73)/ ( MAT157Y1 with a minimum mark of 67)/  MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT292H1
+Corequisite: 
+
+
+Title: CSC263H1: Data Structures and Analysis
+Prerequisite: CSC236H1/ ​ CSC240H1/  CSC236H5/  CSCB36H3/  APS105H1/  APS106H1/  ESC180H1;  STA237H1/  STA247H1/ ​ STA255H1/ ​ STA257H1/  STAB57H3/  STAB52H3/  ECE302H1/  STA286H1/  CHE223H1/  CME263H1/  MIE231H1/  MIE236H1/  MSE238H1/  STA286H1
+Corequisite: 
+
+
+Title: CSC236H1: Introduction to the Theory of Computation
+Prerequisite: (60% or higher in  CSC148H1, 60% or higher in  CSC165H1) / (60% or higher in  CSC111H1)
+Corequisite: 
+
+
+Title: CSC165H1: Mathematical Expression and Reasoning for Computer Science
+Prerequisite: 
+Corequisite: CSC108H1/ CSC120H1/(equivalent programming experience)
+
+
+Title: CSC240H1: Enriched Introduction to the Theory of Computation
+Prerequisite: CSC110Y1 (with a minimum mark of at least 70%) /  CSC165H1 (with a minimum mark of at least 85%) / students with a strong mathematical background who have not completed  CSC110Y1 or  CSC165H1 may enrol in  CSC240H1 as an enriched alternative to  CSC165H1
+Corequisite: Corequisite:  CSC111H1/  CSC148H1;  MAT137Y1/  MAT157Y1.  MAT135H1 and  MAT136H1 do not provide appropriate preparation for  CSC240H1. Students with programming experience equivalent to  CSC111H1/  CSC148H1 or who have completed math courses equivalent to  MAT137Y1/ MAT157Y may apply for a corequisite waiver.
+
+
+Title: CSC265H1: Enriched Data Structures and Analysis
+Prerequisite: CSC240H1 (with a minimum mark of 70%)/ ( CSC236H1 (with a minimum mark of 85%),  MAT377H1/  STA237H1/  STA247H1/  STA255H1/  STA257H1). Notes: Students who have completed  CSC240H1 must enrol in  MAT377H1/  STA237H1/  STA247H1/  STA255H1/  STA257H1 concurrently with  CSC265H1, if they have not already completed one of those courses. Students who have completed additional 200- or 300-level Mathematics courses may submit a prerequisite waiver request for permission to complete the statistics requirement as a co-requisite or to consider other courses as appropriate preparation for  CSC265H1.
+Corequisite: 
+
+
+Title: MAT377H1: Mathematical Probability Theory
+Prerequisite: MAT247H1/ MAT247H5,  MAT257Y1
+Corequisite: 
+
+
+Title: CSC420H1: Introduction to Image Understanding
+Prerequisite: For 2024-25:  CSC263H1/  CSC265H1/  ECE345H1/  ECE358H1/  MIE335H1; ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ (MAT186H1, MAT187H1)/ ( MAT194H1,  MAT195H1)/ (ESC194H1, ESC195H1);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1  Beginning Fall 2025:  CSC263H1/  CSC265H1/  ECE345H1/  ECE358H1/  MIE335H1;  CSC311H1;  CSC320H1. We encourage students interested in taking  CSC420H1 in 2025-26 or beyond to include  CSC263H1,  CSC311H1 and  CSC320H1 in their enrolment plans for 2024-25.
+Corequisite: 
+
+
+Title: MAT194H1: Mathematical Personalities
+Prerequisite: 
+Corequisite: 
+
+
+Title: MAT195H1: Mathematics as an Interdisciplinary Pursuit
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC311H1: Introduction to Machine Learning
+Prerequisite: CSC207H1/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  MAT235Y1/​  MAT237Y1/​  MAT257Y1/​ (minimum of 77% in  MAT135H1 and  MAT136H1)/ (minimum of 73% in  MAT137Y1)/ (minimum of 67% in  MAT157Y1)/ MAT291H1/ MAT294H1/ (minimum of 77% in MAT186H1, MAT187H1)/ (minimum of 73% in  MAT194H1,  MAT195H1)/ (minimum of 73% in ESC194H1, ESC195H1);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1;  STA237H1/  STA247H1/  STA255H1/  STA257H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC413H1: Neural Networks and Deep Learning
+Prerequisite: CSC311H1/​  CSC311H5/  CSCC11H3/  CSC411H1/  STA314H1/ ECE421H1/ ROB313H1/;  MAT235Y1/​  MAT237Y1/​  MAT257Y1/  MAT257Y5/  MAT291H1/  MAT294H1/ AER210H1/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5)/ ( MATB41H3,  MATB42H3);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1/  MAT223H5/  MATA23H3
+Corequisite: 
+
+
+Title: STA314H1: Statistical Methods for Machine Learning I
+Prerequisite: STA302H1/  STA302H5/  STAC67H3;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA48H3/  CSCA20H3/  CSC108H5/  CSC148H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5)
+Corequisite: 
+
+
+Title: CSC412H1: Probabilistic Learning and Reasoning
+Prerequisite: CSC311H1/  CSC411H1/  STA314H1/ ECE421H1/ ROB313H1/  CSCC11H3/  CSC311H5
+Corequisite: 
+
+
+Title: STA414H1: Statistical Methods for Machine Learning II
+Prerequisite: STA314H1/  CSC411H1/  CSC311H1/ ( STA314H5,  STA315H5)/  CSCC11H3/  CSC411H5;  STA302H1/  STAC67H3/  STA302H5;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA48H3/  CSCA20H3/  CSC108H5/  CSC148H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5);  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+Corequisite: 
+
+
+Title: CSC304H1: Algorithmic Game Theory and Mechanism Design
+Prerequisite: STA247H1/  STA255H1/  STA257H1/  STA237H1/  PSY201H1/  ECO227Y1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: CSC384H1: Introduction to Artificial Intelligence
+Prerequisite: ( CSC263H1/​  CSC265H1/  CSC263H5/  CSCB63H3/ ECE345H1/ ECE358H1/  MIE245H1/ ( CSC148H1, enrolled in ASMAJ1446A, completed at least 9.0 credits),  STA220H1/  STA237H1/  STA247H1/​  STA255H1/​  STA257H1/  STAB57H3/  STAB52H3/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1/  PSY201H1)
+Corequisite: 
+
+
+Title: CSC486H1: Knowledge Representation and Reasoning
+Prerequisite: CSC384H1/  CSC384H5/ ROB311H1
+Corequisite: 
+
+
+Title: CSC324H1: Principles of Programming Languages
+Prerequisite: CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: PSY270H1: Introduction to Cognitive Psychology
+Prerequisite: PSY100H1/ PSY100Y5/ PSYA01H3/ COG250Y1
+Corequisite: 
+
+
+Title: PHL232H1: Knowledge and Reality
+Prerequisite: 
+Corequisite: 
+
+
+Title: PHL342H1: Minds and Machines
+Prerequisite: 8.0 credits, including  COG250Y1 or 1.5 credits in PHL
+Corequisite: 
+
+
+Title: CSC318H1: The Design of Interactive Computational Media
+Prerequisite: Any 0.5 credit in CSC/ ESC180H1/ ESC190H1/ APS105H1/ APS106H1
+Corequisite: 
+
+
+Title: LIN101H1: Introduction to Linguistics: Sound Structure
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN200H1: Introduction to Language
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC309H1: Programming on the Web
+Prerequisite: CSC209H1/  CSC209H5/  CSCB09H3/ ESC180H1/ ESC190H1/  CSC190H1/ (APS105H1, ECE244H1)
+Corequisite: 
+
+
+Title: CSC428H1: Human-Computer Interaction
+Prerequisite: CSC318H1;  STA237H1/  STA247H1/ ​ STA255H1/ ​ STA257H1/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1;  CSC207H1/ APS105H1/ ESC180H1/ CSC180H1
+Corequisite: 
+
+
+Title: CSC343H1: Introduction to Databases
+Prerequisite: CSC111H1/  CSC165H1/ ​ CSC240H1/ ​( MAT135H1,  MAT136H1)/  MAT135Y1/  MAT137Y1/ ​ MAT157Y1/ (MAT186H1, MAT187H1)/ ( MAT194H1,  MAT195H1)/ (ESC194H1, ESC195H1);  CSC207H1/  CSC207H5/  CSCB07H3/ ECE345H1/ ESC190H1
+Corequisite: 
+
+
+Title: CSC367H1: Parallel Programming
+Prerequisite: CSC258H1/  CSC258H5/  CSCB58H3;  CSC209H1/  CSC209H5/  CSCB09H3
+Corequisite: 
+
+
+Title: CSC258H1: Computer Organization
+Prerequisite: (60% or higher in ( CSC148H1/  CSC148H5/  CSCA48H3), 60% or higher in ( CSC165H1/  CSC240H1/  MAT102H5/  MATA67H3/  CSCA67H3))/ 60% or higher in  CSC111H1
+Corequisite: 
+
+
+Title: CSC369H1: Operating Systems
+Prerequisite: CSC209H1/  CSC209H5/  CSCB09H3;  CSC258H1/  CSC258H5/  CSCB58H3
+Corequisite: 
+
+
+Title: CSC457H1: Principles of Computer Networks
+Prerequisite: CSC373H1/  CSC373H5/  CSCC73H3,  STA247H1/  STA255H1/  STA257H1/  STA237H1
+Corequisite: 
+
+
+Title: CSC373H1: Algorithm Design, Analysis & Complexity
+Prerequisite: CSC263H1/  CSC265H1 /  CSC263H5/  CSCB63H3
+Corequisite: 
+
+
+Title: CSC458H1: Computer Networking Systems
+Prerequisite: CSC209H1,  CSC258H1,  CSC263H1/  CSC265H1,  STA247H1/  STA255H1/  STA257H1/  STA237H1/  ECO227Y1
+Corequisite: 
+
+
+Title: CSC368H1: Computer Architecture
+Prerequisite:  CSC209H1,  CSC258H1 
+Corequisite: 
+
+
+Title: CSC385H1: Microprocessor Systems
+Prerequisite: CSC258H1,  CSC209H1
+Corequisite: 
+
+
+Title: CSC443H1: Database System Technology
+Prerequisite: CSC343H1,  CSC369H1,  CSC373H1/ CSC375H1
+Corequisite: 
+
+
+Title: CSC469H1: Operating Systems Design and Implementation
+Prerequisite: CSC369H1
+Corequisite: 
+
+
+Title: CSC488H1: Compilers and Interpreters
+Prerequisite: CSC258H1/  CSC258H5/  CSCB58H3,  CSC324H1/  CSC324H5/  CSCC24H3,  CSC263H1/  CSC265H1/  CSC263H5/  CSCB63H3
+Corequisite: 
+
+
+Title: CSC301H1: Introduction to Software Engineering
+Prerequisite: CSC209H1,  CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: CSC410H1: Software Testing and Verification
+Prerequisite: CSC207H1,  CSC236H1/ CSC240H1
+Corequisite: 
+
+
+Title: CSC417H1: Physics-Based Animation
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/  MAT291H1/ MAT294H1;  MAT223H1/​  MAT240H1/ MAT185H1/ MAT188H1;  CSC209H1/ ​proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: CSC317H1: Computer Graphics
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT292H1/ MAT294H1/ ( MAT232H5/  MAT233H5,  MAT236H5)/ ( MATB41H3,  MATB42H3);  MAT223H1/  MAT240H1/  MAT223H5/  MATA22H3/ MAT185H1/ MAT188H1;  CSC209H1/  CSC209H5/  CSCB09H3/ proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: CSC419H1: Geometry Processing
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT294H1;  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1;  CSC209H1/ proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: APM462H1: Nonlinear Optimization
+Prerequisite: ( MAT223H1, MAT224H1) / MAT247H1,  MAT235Y1/ MAT237Y1/ MAT257Y1
+Corequisite: 
+
+
+Title: PHY385H1: Introductory Optics
+Prerequisite: PHY250H1,  PHY224H1,  MAT235Y1/  MAT237Y1/  MAT257Y1
+Corequisite: 
+
+
+Title: PHY250H1: Electricity and Magnetism
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY224H1: Practical Physics I
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: PHY231H1/  PHY250H1/  PHY252H1/  PHY254H1/  PHY256H1
+
+
+Title: PHY231H1: Physics of Living Systems
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: PHY252H1: Thermal Physics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY254H1: Classical Mechanics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY256H1: Introduction to Quantum Physics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1, ( MAT223H1/  MAT240H1 recommended)
+
+
+Title: PSL440Y1: Neuroscience: Systems and Behaviour
+Prerequisite: PSL300H1/ PSY290H1/ CSB332H1 or equivalent
+Corequisite: 
+
+
+Title: PSL300H1: Human Physiology I
+Prerequisite: 
+Corequisite: 
+
+
+Title: PSY290H1: Behavioural Neuroscience
+Prerequisite: PSY100H1/  PSY100Y5/  PSYA01H3/  COG250Y1
+Corequisite: 
+
+
+Title: PSY280H1: Introduction to Sensation and Perception
+Prerequisite: PSY100H1/  PSY100Y5/  PSYA01H3/  COG250Y1
+Corequisite: 
+
+
+Title: CSC300H1: Computers and Society
+Prerequisite: 0.5 credit in CSC
+Corequisite: 
+
+
+Title: CSC404H1: Introduction to Video Game Design
+Prerequisite: CSC301H1/  CSC317H1/  CSC318H1/  CSC384H1/  CSC417H1/  CSC418H1/  CSC419H1
+Corequisite: 
+
+
+Title: CSC303H1: Social and Information Networks
+Prerequisite: CSC263H1/  CSC265H1/  CSC263H5/  CSCB63H3,  STA247H1/  STA255H1/  STA257H1/  ECO227Y1/  STA237H1/  STAB52H3/  STAB57H3,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: MUS300H1: Music, Media and Technology
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN212H1: Cinema and Sensation I: Action/Spectacle
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN432H1: Advanced Study in Cinema as Social and Cultural Practice
+Prerequisite: At least 10.0 credits, including  CIN105Y1,  CIN201Y1
+Corequisite: CIN301Y1
+
+
+Title: CIN105Y1: Introduction to Film Study
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN201Y1: Film Cultures I: Art and Industry
+Prerequisite: CIN105Y1
+Corequisite: 
+
+
+Title: CIN301Y1: Film Cultures II: Politics and Global Media
+Prerequisite: CIN105Y1,  CIN201Y1
+Corequisite: 
+
+
+Title: ENG235H1: The Graphic Novel
+Prerequisite: 1.0 ENG credit or any 4.0 credits
+Corequisite: 
+
+
+Title: ECO326H1: Advanced Microeconomics - Game Theory
+Prerequisite: ECO200Y1(70%)/ ECO204Y1/ ECO206Y1;  ECO220Y1(70%)/  ECO227Y1/ ( STA237H1(70%),  STA238H1(70%))/ ( STA247H1(70%),  STA248H1(70%))/ ( STA257H1,  STA261H1)
+Corequisite: 
+
+
+Title: ECO200Y1: Microeconomic Theory
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3 (67%),  MGEA06H3 (67%));  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO204Y1: Microeconomic Theory and Applications (for Commerce)
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/ ECO105Y1(80%);  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO206Y1: Microeconomic Theory
+Prerequisite: ( ECO101H1(70%),  ECO102H1(70%))/  ECO100Y5(70%)/ ( ECO101H5(70%),  ECO102H5(70%))/ ( MGEA02H3 (70%),  MGEA06H3(70%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: 
+
+
+Title: RSM482H1: Game Theory for Business Strategy
+Prerequisite: ECO204Y1/ ECO206Y1
+Corequisite: 
+
+
+Title: SOC204H1: Introduction to Qualitative Methods in Sociology
+Prerequisite: SOC100H1+  SOC150H1
+Corequisite: 
+
+
+Title: SOC100H1: Introduction to Sociology I: Sociological Perspectives
+Prerequisite: 
+Corequisite: 
+
+
+Title: SOC150H1: Introduction to Sociology II: Sociological Inquiries
+Prerequisite: SOC100H1
+Corequisite: 
+
+
+Title: CSC302H1: Engineering Large Software Systems
+Prerequisite: CSC301H1
+Corequisite: 
+
+
+Title: CSC316H1: Data Visualization: Foundations and Advanced Programming
+Prerequisite: CSC207H1
+Corequisite: 
+
+
+Title: CSC454H1: The Business of Software
+Prerequisite: 2.5 credits at the 300-level or higher
+Corequisite: 
+
+
+Title: STA313H1: Data Visualization
+Prerequisite: CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1;  STA238H1/  STA248H1/  STA261H1/  ECO227Y1
+Corequisite: 
+
+
+Title: ENV281H1: Special Topics in Environment
+Prerequisite: Completion of 4.0 credits
+Corequisite: 
+
+
+Title: ENV381H1: Special Topics in Environment
+Prerequisite: Completion of 9.0 credits
+Corequisite: 
+
+
+Title: IRE260H1: Organizational Behaviour
+Prerequisite: 4.0 credits
+Corequisite: 
+
+
+Title: COG260H1: Data, Computation, and the Mind
+Prerequisite: CSC108H1/ CSC148H1
+Corequisite: COG250Y1
+
+
+Title: COG341H1: Issues in Cognitive Science I: Attention, Perception, and Consciousness
+Prerequisite: COG250Y1 and one of  PSY270H1/ PHL342H1
+Corequisite: 
+
+
+Title: COG343H1: Issues in Cognitive Science III: Computational Cognition
+Prerequisite: COG260H1,  CSC148H1,  STA220H1/ PSY201H1
+Corequisite: COG250Y1
+
+
+Title: COG344H1: Issues in Cognitive Science IV: Language and Communication
+Prerequisite: COG250Y1 and one of either  LIN232H1/ LIN241H1 or  JLP315H1/ JLP374H1.
+Corequisite: 
+
+
+Title: LIN232H1: Syntactic Patterns in Language
+Prerequisite: LIN102H1
+Corequisite: 
+
+
+Title: LIN102H1: Introduction to Linguistics: Sentence Structure and Meaning
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN241H1: Introduction to Semantics
+Prerequisite: LIN102H1
+Corequisite: 
+
+
+Title: JLP315H1: Language Acquisition
+Prerequisite: 1.0 credit at the 200+ level in LIN/JAL/JUP/PSL/PSY/COG
+Corequisite: 
+
+
+Title: JLP374H1: Psychology of Language
+Prerequisite: 1.0 credit from  LIN228H1,  LIN229H1,  LIN232H1,  LIN241H1,  PSY260H1,  PSY270H1,  PSY280H1,  PSY290H1,  COG250Y1
+Corequisite: 
+
+
+Title: LIN228H1: Phonetics
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN229H1: Phonological Patterns in Language
+Prerequisite: LIN101H1,  LIN228H1
+Corequisite: 
+
+
+Title: PSY260H1: Introduction to Learning and Plasticity
+Prerequisite: PSY100H1/ PSY100Y5/ PSYA01H3/ COG250Y1
+Corequisite: 
+
+
+Title: CSC436H1: Numerical Algorithms
+Prerequisite: CSC336H1/ CSC350H1
+Corequisite: 
+
+
+Title: CSC446H1: Computational Methods for Partial Differential Equations
+Prerequisite: CSC351H1/ ( CSC336H1 (75%))/ equivalent mathematical background;  MAT237Y1/  MAT257Y1;  APM346H1/  MAT351Y1/ ( MAT244H1/  MAT267H1 and exposure to PDEs)
+Corequisite: 
+
+
+Title: APM346H1: Partial Differential Equations
+Prerequisite: MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3)/  MAT237Y1/  MAT237Y5/  MAT257Y1, ( MAT244H1/  MATB44H3/  MAT244H5/  MAT267H1)
+Corequisite: 
+
+
+Title: MAT244H1: Introduction to Ordinary Differential Equations
+Prerequisite: ( MAT133Y1/  MAT135H1/  MAT135H5/  MATA35H3/  MATA30H3/  MATA31H3,  MAT136H1/  MAT136H5/  MATA36H3/  MATA37H3)/  MAT135Y5/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5),  MAT223H1/  MATA23H3/  MAT223H5/  MAT240H1/  MAT240H5
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: MAT267H1: Advanced Ordinary Differential Equations
+Prerequisite: MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5,  MAT247H1/  MAT247H5
+Corequisite: MAT257Y1
+
+
+Title: MAT351Y1: Partial Differential Equations
+Prerequisite: MAT257Y1/  MAT237Y1 (85%),  MAT267H1
+Corequisite: 
+
+
+Title: CSC456H1: High-Performance Scientific Computing
+Prerequisite: CSC436H1/ ( CSC336H1 (75%))/ equivalent mathematical background;  CSC209H1/ proficiency in C, C++, or Fortran
+Corequisite: 
+
+
+Title: CSC466H1: Numerical Methods for Optimization Problems
+Prerequisite: CSC336H1,  MAT223H1/  MAT240H1,  MAT235Y1/  MAT237Y1/  MAT257Y1
+Corequisite: 
+
+
+Title: MAT334H1: Complex Variables
+Prerequisite: MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5,  MAT235Y1/ MAT235Y5/( MAT232H5,  MAT236H5)/( MATB41H3,  MATB42H3)/ MAT237Y1/( MATB41H3,  MATB42H3,  MATB43H3)/ MAT237Y5/ MAT257Y1
+Corequisite: 
+
+
+Title: MAT354H1: Complex Analysis I
+Prerequisite: MAT257Y1
+Corequisite: 
+
+
+Title: MAT337H1: Introduction to Real Analysis
+Prerequisite: MAT257Y1/ [ MAT224H1/  MATA24H3/  MAT224H5/  MAT247H1/  MAT247H5,  MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3/  MATB43H3)/  MAT237Y1/  MAT237Y5,  MAT246H1/  MAT157Y1]
+Corequisite: 
+
+
+Title: MAT357H1: Foundations of Real Analysis
+Prerequisite: MAT257Y1
+Corequisite: 
+
+
+Title: CSC308H1: Technology Leadership
+Prerequisite: CSC207H1
+Corequisite: 
+
+
+Title: CSC490H1: Capstone Design Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC491H1: Capstone Design Project
+Prerequisite: 
+Corequisite: CSC454H1/ CSC2527H
+
+
+Title: CSC494H1: Computer Science Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC495H1: Computer Science Project
+Prerequisite: CSC494H1. 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC494Y1: Computer Science Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC463H1: Computational Complexity and Computability
+Prerequisite: CSC236H1/  CSC240H1/  CSC236H5/  CSCB36H3
+Corequisite: 
+
+
+Title: CSC310H1: Information Theory
+Prerequisite: 60% or higher in  CSC148H1/ 60% or higher in  CSC111H1/ ESC190H1,  CSC263H1/  CSC265H1/ ECE345H1/ ECE358H1/ MIE245H1,  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1
+Corequisite: 
+
+
+Title: CSC438H1: Computability and Logic
+Prerequisite: ( CSC363H1/  CSC463H1)/  CSC365H1/  CSC373H1/  CSC375H1/  MAT247H1
+Corequisite: 
+
+
+Title: MAT309H1: Introduction to Mathematical Logic
+Prerequisite: MAT257Y1/ [ MAT223H1/  MATA23H3/  MAT223H5/  MAT240H1/  MAT240H5,  MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3/  MATB43H3)/  MAT237Y1/  MAT237Y5,  MAT246H1/  MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5/  CSC236H1/  CSC240H1]
+Corequisite: 
+
+
+Title: CSC448H1: Formal Languages and Automata
+Prerequisite: CSC236H1/ CSC240H1,  CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: CSC473H1: Advanced Algorithm Design
+Prerequisite: CSC373H1,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: MAT332H1: Introduction to Graph Theory
+Prerequisite: MAT224H1/ MATB24H3/ MAT224H5/ MAT247H1/ MAT247H5
+Corequisite: 
+
+
+Title: MAT344H1: Introduction to Combinatorics
+Prerequisite: MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5
+Corequisite: 
+
+
+Title: CSC336H1: Numerical Methods
+Prerequisite: CSC148H1/  CSC111H1;  MAT133Y1(70%)/ ( MAT135H1,  MAT136H1)/  MAT135Y1/  MAT137Y1/  MAT157Y1,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: CSC148H1: Introduction to Computer Science
+Prerequisite: CSC108H1/ (equivalent programming experience)
+Corequisite: 
+
+
+Title: CSC108H1: Introduction to Computer Programming
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC111H1: Foundations of Computer Science II
+Prerequisite: CSC110Y1 (70% or higher)
+Corequisite: 
+
+
+Title: CSC110Y1: Foundations of Computer Science I
+Prerequisite: 
+Corequisite: 
+
+
+Title: MAT133Y1: Calculus and Linear Algebra for Commerce
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT135H1: Calculus I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT136H1: Calculus II
+Prerequisite: MAT135H1/  MAT135H5/  MATA30H3/  MATA31H3/ APS162H1/ ESC194H1/ MAT186H1/ MAT196H1
+Corequisite: 
+
+
+Title: MAT137Y1: Calculus with Proofs
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT157Y1: Analysis I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT223H1: Linear Algebra I
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT240H1: Algebra I
+Prerequisite: High school level calculus
+Corequisite: MAT157Y1
+
+
+Title: MAT235Y1: Multivariable Calculus
+Prerequisite: MAT133Y1/  MAT133Y5/ ( MATA32H3,  MATA33H3)/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3/ MATA37H3)/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5) 
+Corequisite: 
+
+
+Title: MAT237Y1: Multivariable Calculus with Proofs
+Prerequisite: [ MAT133Y1/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3),  MAT138H1/  MAT102H5/  MAT246H1]/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/ ( MATA30H3/  MATA31H3,  MATA37H3)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5),  MAT223H1/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT138H1: Introduction to Proofs
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT246H1: Concepts in Abstract Mathematics
+Prerequisite: MAT133Y1/  MAT133Y5/ ( MATA32H3,  MATA33H3)/ ( MAT135H1,  MAT136H1)/ ( MAT135H5,  MAT136H5)/ ( MATA30H3/  MATA31H3,  MATA36H3/  MATA37H3)/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5),  MAT223H1/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT257Y1: Analysis II
+Prerequisite: MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5,  MAT247H1/  MAT247H5
+Corequisite: 
+
+
+Title: MAT247H1: Algebra II
+Prerequisite: MAT240H1/  MAT240H5
+Corequisite: MAT157Y1
+
+
+Title: APM236H1: Applications of Linear Programming
+Prerequisite: MAT221H1/  MAT223H1/  MAT223H5/  MATA22H3/  MATA23H3/  MAT240H1/  MAT240H5
+Corequisite: 
+
+
+Title: MAT221H1: Applied Linear Algebra
+Prerequisite: High school level calculus
+Corequisite: 
+
+
+Title: MAT224H1: Linear Algebra II
+Prerequisite: MAT221H1(80%)/ MAT223H1/ MAT223H5/  MATA22H3/  MATA23H3/  MAT240H1/ MAT240H5
+Corequisite: 
+
+
+Title: STA238H1: Probability, Statistics and Data Analysis II
+Prerequisite: STA237H1/  STA247H1/  STA257H1/  STAB52H3/  STA256H5
+Corequisite: CSC108H1/  CSC110Y1/  CSC148H1 *Note: the corequisite may be completed either concurrently or in advance.
+
+
+Title: STA237H1: Probability, Statistics and Data Analysis I
+Prerequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ ( MATA30H3,  MATA36H3)/ ( MATA31H3,  MATA37H3)/ ( MAT135H5,  MAT136H5)/  MAT137Y5/  MAT157Y5
+Corequisite: ( CSC108H1/ equivalent programming experience)/  CSC110Y1/  CSC148H1 *Note: the corequisite may be completed either concurrently or in advance.
+
+
+Title: STA247H1: Probability with Computer Applications
+Prerequisite: ( MAT135H1,  MAT136H1)/ MAT137Y1/ MAT157Y1/( MATA30H3,  MATA36H3)/( MATA31H3,  MATA37H3)/( MAT135H5,  MAT136H5)/ MAT137Y5/ MAT157Y5;  CSC111H1/ CSC148H1/ CSCA48H3/ CSC148H5
+Corequisite: 
+
+
+Title: STA257H1: Probability and Statistics I
+Prerequisite: MAT137Y1/  MAT157Y1/ ( MATA31H3,  MATA37H3)/  MAT137Y5/  MAT157Y5
+Corequisite: MAT237Y1/  MAT257Y1/  MAT257Y5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+
+
+Title: STA248H1: Statistics for Computer Scientists
+Prerequisite: STA237H1/ STA247H1/ STA257H1/ STA256H5/ STAB52H3;  CSC111H1/ CSC148H1/ CSCA48H3/ CSC148H5
+Corequisite: 
+
+
+Title: STA261H1: Probability and Statistics II
+Prerequisite: STA257H1/  STAB52H3/  STA256H5
+Corequisite: MAT237Y1/  MAT257Y1/  MAT257Y5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+
+
+Title: STA302H1: Methods of Data Analysis I
+Prerequisite: STA238H1/  STA248H1/  STA255H1/  STA261H1/  ECO227Y1/  STAB57H3/  STA258H5/  STA260H5/  ECO227Y5;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA20H3/  CSCA48H3/  CSC108H5/  CSC148H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+Corequisite: 
+
+
+Title: STA255H1: Statistical Theory
+Prerequisite: STA220H1/  STA221H1/  STA288H1/  ECO220Y1 (note:  ECO220Y1 may be taken as a co-requisite)/  STAB22H3/  STA220H5/  ECO220Y5;  MAT133Y1 (70%)/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ ( MATA32H3 (70%),  MATA33H3 (70%))/ ( MATA29H3 (70%),  MATA35H3 (70%))/ ( MATA30H3,  MATA36H3)/ ( MATA31H3,  MATA37H3)/  MAT133Y5 (70%)/ ( MAT132H5 (70%),  MAT134H5 (70%))/ ( MAT135H5, MAT136H5)/  MAT137Y5/  MAT157Y5
+Corequisite: 
+
+
+Title: STA220H1: The Practice of Statistics I
+Prerequisite: 
+Corequisite: 
+
+
+Title: STA221H1: The Practice of Statistics II
+Prerequisite: STA220H1/  STA288H1/  PSY201H1/  GGR270H1/  EEB225H1/  STAB22H3/  STA220H5
+Corequisite: 
+
+
+Title: STA288H1: Statistics and Scientific Inquiry in the Life Sciences
+Prerequisite: BIO230H1/ BIO255H1
+Corequisite: 
+
+
+Title: BIO230H1: From Genes to Organisms
+Prerequisite: BIO130H1, ( CHM135H1,  CHM136H1)/( CHM138H1,  CHM139H1)/ CHM151Y1
+Corequisite: 
+
+
+Title: BIO130H1: Molecular and Cell Biology
+Prerequisite: SBI4U and SCH4U (Grade 12 University Preparation Biology and Chemistry) or permission of department. Please contact bio130@utoronto.ca for more information.
+Corequisite: 
+
+
+Title: CHM135H1: Chemistry: Physical Principles
+Prerequisite: Chemistry SCH4U, Mathematics MHF4U + MCV4U
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1 recommended but may be required for further Chemistry courses 
+
+
+Title: CHM136H1: Introductory Organic Chemistry I
+Prerequisite: CHM135H1
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1 recommended but may be required for further Chemistry courses
+
+
+Title: CHM151Y1: Chemistry: The Molecular Science
+Prerequisite: Chemistry SCH4U, Mathematics MHF4U + MCV4U; Physics SPH4U recommended
+Corequisite: ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1; ( PHY131H1,  PHY132H1)/ ( PHY151H1,  PHY152H1) recommended, but may be required for further Chemistry courses
+
+
+Title: PHY131H1: Introduction to Physics I
+Prerequisite: 
+Corequisite: MAT135H1/  MAT137Y1/  MAT157Y1 recommended
+
+
+Title: PHY132H1: Introduction to Physics II
+Prerequisite: PHY131H1/  PHY151H1
+Corequisite: MAT136H1/  MAT137Y1/  MAT157Y1 recommended
+
+
+Title: PHY151H1: Foundations of Physics I
+Prerequisite: MCV4U Calculus & Vectors / MCB4U Functions & Calculus; SPH4U Physics
+Corequisite: MAT137Y1/ MAT157Y1
+
+
+Title: PHY152H1: Foundations of Physics II
+Prerequisite: PHY131H1/ PHY151H1/ PHY180H1
+Corequisite: MAT137Y1/ MAT157Y1
+
+
+Title: BIO255H1: From Genes to Organisms with Advanced Laboratory
+Prerequisite: BIO130H1, ( CHM135H1,  CHM136H1)/( CHM138H1,  CHM139H1)/ CHM151Y1, cGPA 3.0
+Corequisite: 
+
+
+Title: PSY201H1: Statistics I
+Prerequisite: PSY100H1/  PSY100Y5/ ( PSYA01H3 and  PSYA02H3)/  COG250Y1
+Corequisite: 
+
+
+Title: PSY100H1: Introductory Psychology
+Prerequisite: 
+Corequisite: 
+
+
+Title: COG250Y1: Introduction to Cognitive Science
+Prerequisite: 
+Corequisite: 
+
+
+Title: GGR270H1: Introductory Analytical Methods
+Prerequisite: 
+Corequisite: 
+
+
+Title: EEB225H1: Biostatistics for Biological Sciences
+Prerequisite: BIO120H1
+Corequisite: 
+
+
+Title: BIO120H1: Adaptation and Biodiversity
+Prerequisite: Grade 12 Biology or equivalent. Students without high school Biology must consult the BIO120 Office (bio120@utoronto.ca)
+Corequisite: 
+
+
+Title: ECO220Y1: Introduction to Data Analysis and Applied Econometrics
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3(67%),  MGEA06H3 (67%));  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO101H1: Principles of Microeconomics
+Prerequisite: 
+Corequisite: 
+
+
+Title: ECO102H1: Principles of Macroeconomics
+Prerequisite: ECO101H1/  ECO101H5/  MGEA02H3
+Corequisite: 
+
+
+Title: ECO105Y1: Principles of Economics for Non-Specialists
+Prerequisite: 
+Corequisite: 
+
+
+Title: ECO227Y1: Foundations of Econometrics
+Prerequisite: ( ECO101H1(70%),  ECO102H1(70%))/  ECO100Y5(70%)/ ( ECO101H5(70%),  ECO102H5(70%))/ ( MGEA02H3(70%),  MGEA06H3(70%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: Recommended:  MAT223H1/  MAT240H1,  MAT235Y1/  MAT237Y1/  ECO210H1
+
+
+Title: ECO210H1: Mathematical Methods for Economic Theory
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3 (67%),  MGEA06H3 (67%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: 
+
+
+Title: STA347H1: Probability
+Prerequisite: STA247H1(70%)/  STA255H1(70%)/  STA237H1(70%)/  STA257H1/  ECO227Y1/  STAB52H3/  STA256H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5) (Note:  STA257H1,  MAT223H1/ MAT240H1,  MAT237Y1/ MAT257Y1 are very strongly recommended)
+Corequisite: 
+
+
+Title: CSC401H1: Natural Language Computing
+Prerequisite: CSC207H1/  CSC209H1/  CSC207H5/  CSCB07H3/  CSC209H5/  CSCB09H3/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  STA237H1/  STA247H1/​  STA255H1/ ​ STA257H1/  STAB57H3/  STAB52H3/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC207H1: Software Design
+Prerequisite: 60% or higher in  CSC148H1/ 60% or higher in  CSC111H1
+Corequisite: 
+
+
+Title: CSC209H1: Software Tools and Systems Programming
+Prerequisite: CSC207H1/  CSC207H5/  CSCB07H3
+Corequisite: 
+
+
+Title: CSC485H1: Computational Linguistics
+Prerequisite: CSC209H1/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  STA237H1/  STA247H1/​  STA255H1/ ​ STA257H1/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC320H1: Introduction to Visual Computing
+Prerequisite: CSC263H1/  CSC265H1/ ECE345H1/ ECE358H1/  MIE335H1,  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1, (  MAT136H1 with a minimum mark of 77)/ ( MAT137Y1 with a minimum mark of 73)/ ( MAT157Y1 with a minimum mark of 67)/  MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT292H1
+Corequisite: 
+
+
+Title: CSC263H1: Data Structures and Analysis
+Prerequisite: CSC236H1/ ​ CSC240H1/  CSC236H5/  CSCB36H3/  APS105H1/  APS106H1/  ESC180H1;  STA237H1/  STA247H1/ ​ STA255H1/ ​ STA257H1/  STAB57H3/  STAB52H3/  ECE302H1/  STA286H1/  CHE223H1/  CME263H1/  MIE231H1/  MIE236H1/  MSE238H1/  STA286H1
+Corequisite: 
+
+
+Title: CSC236H1: Introduction to the Theory of Computation
+Prerequisite: (60% or higher in  CSC148H1, 60% or higher in  CSC165H1) / (60% or higher in  CSC111H1)
+Corequisite: 
+
+
+Title: CSC165H1: Mathematical Expression and Reasoning for Computer Science
+Prerequisite: 
+Corequisite: CSC108H1/ CSC120H1/(equivalent programming experience)
+
+
+Title: CSC240H1: Enriched Introduction to the Theory of Computation
+Prerequisite: CSC110Y1 (with a minimum mark of at least 70%) /  CSC165H1 (with a minimum mark of at least 85%) / students with a strong mathematical background who have not completed  CSC110Y1 or  CSC165H1 may enrol in  CSC240H1 as an enriched alternative to  CSC165H1
+Corequisite: Corequisite:  CSC111H1/  CSC148H1;  MAT137Y1/  MAT157Y1.  MAT135H1 and  MAT136H1 do not provide appropriate preparation for  CSC240H1. Students with programming experience equivalent to  CSC111H1/  CSC148H1 or who have completed math courses equivalent to  MAT137Y1/ MAT157Y may apply for a corequisite waiver.
+
+
+Title: CSC265H1: Enriched Data Structures and Analysis
+Prerequisite: CSC240H1 (with a minimum mark of 70%)/ ( CSC236H1 (with a minimum mark of 85%),  MAT377H1/  STA237H1/  STA247H1/  STA255H1/  STA257H1). Notes: Students who have completed  CSC240H1 must enrol in  MAT377H1/  STA237H1/  STA247H1/  STA255H1/  STA257H1 concurrently with  CSC265H1, if they have not already completed one of those courses. Students who have completed additional 200- or 300-level Mathematics courses may submit a prerequisite waiver request for permission to complete the statistics requirement as a co-requisite or to consider other courses as appropriate preparation for  CSC265H1.
+Corequisite: 
+
+
+Title: MAT377H1: Mathematical Probability Theory
+Prerequisite: MAT247H1/ MAT247H5,  MAT257Y1
+Corequisite: 
+
+
+Title: CSC420H1: Introduction to Image Understanding
+Prerequisite: For 2024-25:  CSC263H1/  CSC265H1/  ECE345H1/  ECE358H1/  MIE335H1; ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1/ (MAT186H1, MAT187H1)/ ( MAT194H1,  MAT195H1)/ (ESC194H1, ESC195H1);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1  Beginning Fall 2025:  CSC263H1/  CSC265H1/  ECE345H1/  ECE358H1/  MIE335H1;  CSC311H1;  CSC320H1. We encourage students interested in taking  CSC420H1 in 2025-26 or beyond to include  CSC263H1,  CSC311H1 and  CSC320H1 in their enrolment plans for 2024-25.
+Corequisite: 
+
+
+Title: MAT194H1: Mathematical Personalities
+Prerequisite: 
+Corequisite: 
+
+
+Title: MAT195H1: Mathematics as an Interdisciplinary Pursuit
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC311H1: Introduction to Machine Learning
+Prerequisite: CSC207H1/ APS105H1/ APS106H1/ ESC180H1/  CSC180H1;  MAT235Y1/​  MAT237Y1/​  MAT257Y1/​ (minimum of 77% in  MAT135H1 and  MAT136H1)/ (minimum of 73% in  MAT137Y1)/ (minimum of 67% in  MAT157Y1)/ MAT291H1/ MAT294H1/ (minimum of 77% in MAT186H1, MAT187H1)/ (minimum of 73% in  MAT194H1,  MAT195H1)/ (minimum of 73% in ESC194H1, ESC195H1);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1;  STA237H1/  STA247H1/  STA255H1/  STA257H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1
+Corequisite: 
+
+
+Title: CSC413H1: Neural Networks and Deep Learning
+Prerequisite: CSC311H1/​  CSC311H5/  CSCC11H3/  CSC411H1/  STA314H1/ ECE421H1/ ROB313H1/;  MAT235Y1/​  MAT237Y1/​  MAT257Y1/  MAT257Y5/  MAT291H1/  MAT294H1/ AER210H1/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5)/ ( MATB41H3,  MATB42H3);  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1/  MAT223H5/  MATA23H3
+Corequisite: 
+
+
+Title: STA314H1: Statistical Methods for Machine Learning I
+Prerequisite: STA302H1/  STA302H5/  STAC67H3;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA48H3/  CSCA20H3/  CSC108H5/  CSC148H5;  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5)
+Corequisite: 
+
+
+Title: CSC412H1: Probabilistic Learning and Reasoning
+Prerequisite: CSC311H1/  CSC411H1/  STA314H1/ ECE421H1/ ROB313H1/  CSCC11H3/  CSC311H5
+Corequisite: 
+
+
+Title: STA414H1: Statistical Methods for Machine Learning II
+Prerequisite: STA314H1/  CSC411H1/  CSC311H1/ ( STA314H5,  STA315H5)/  CSCC11H3/  CSC411H5;  STA302H1/  STAC67H3/  STA302H5;  CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1/  CSCA08H3/  CSCA48H3/  CSCA20H3/  CSC108H5/  CSC148H5;  MAT235Y1/  MAT237Y1/  MAT257Y1/ ( MATB41H3,  MATB42H3)/ ( MAT232H5,  MAT236H5)/ ( MAT233H5,  MAT236H5);  MAT223H1/  MAT224H1/  MAT240H1/  MATA22H3/  MATA23H3/  MAT223H5/  MAT240H5/  MATB24H3/  MAT224H5
+Corequisite: 
+
+
+Title: CSC304H1: Algorithmic Game Theory and Mechanism Design
+Prerequisite: STA247H1/  STA255H1/  STA257H1/  STA237H1/  PSY201H1/  ECO227Y1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: CSC384H1: Introduction to Artificial Intelligence
+Prerequisite: ( CSC263H1/​  CSC265H1/  CSC263H5/  CSCB63H3/ ECE345H1/ ECE358H1/  MIE245H1/ ( CSC148H1, enrolled in ASMAJ1446A, completed at least 9.0 credits),  STA220H1/  STA237H1/  STA247H1/​  STA255H1/​  STA257H1/  STAB57H3/  STAB52H3/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1/  PSY201H1)
+Corequisite: 
+
+
+Title: CSC486H1: Knowledge Representation and Reasoning
+Prerequisite: CSC384H1/  CSC384H5/ ROB311H1
+Corequisite: 
+
+
+Title: CSC324H1: Principles of Programming Languages
+Prerequisite: CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: PSY270H1: Introduction to Cognitive Psychology
+Prerequisite: PSY100H1/ PSY100Y5/ PSYA01H3/ COG250Y1
+Corequisite: 
+
+
+Title: PHL232H1: Knowledge and Reality
+Prerequisite: 
+Corequisite: 
+
+
+Title: PHL342H1: Minds and Machines
+Prerequisite: 8.0 credits, including  COG250Y1 or 1.5 credits in PHL
+Corequisite: 
+
+
+Title: CSC318H1: The Design of Interactive Computational Media
+Prerequisite: Any 0.5 credit in CSC/ ESC180H1/ ESC190H1/ APS105H1/ APS106H1
+Corequisite: 
+
+
+Title: LIN101H1: Introduction to Linguistics: Sound Structure
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN200H1: Introduction to Language
+Prerequisite: 
+Corequisite: 
+
+
+Title: CSC309H1: Programming on the Web
+Prerequisite: CSC209H1/  CSC209H5/  CSCB09H3/ ESC180H1/ ESC190H1/  CSC190H1/ (APS105H1, ECE244H1)
+Corequisite: 
+
+
+Title: CSC428H1: Human-Computer Interaction
+Prerequisite: CSC318H1;  STA237H1/  STA247H1/ ​ STA255H1/ ​ STA257H1/ ECE302H1/  STA286H1/ CHE223H1/ CME263H1/ MIE231H1/ MIE236H1/ MSE238H1/ ECE286H1;  CSC207H1/ APS105H1/ ESC180H1/ CSC180H1
+Corequisite: 
+
+
+Title: CSC343H1: Introduction to Databases
+Prerequisite: CSC111H1/  CSC165H1/ ​ CSC240H1/ ​( MAT135H1,  MAT136H1)/  MAT135Y1/  MAT137Y1/ ​ MAT157Y1/ (MAT186H1, MAT187H1)/ ( MAT194H1,  MAT195H1)/ (ESC194H1, ESC195H1);  CSC207H1/  CSC207H5/  CSCB07H3/ ECE345H1/ ESC190H1
+Corequisite: 
+
+
+Title: CSC367H1: Parallel Programming
+Prerequisite: CSC258H1/  CSC258H5/  CSCB58H3;  CSC209H1/  CSC209H5/  CSCB09H3
+Corequisite: 
+
+
+Title: CSC258H1: Computer Organization
+Prerequisite: (60% or higher in ( CSC148H1/  CSC148H5/  CSCA48H3), 60% or higher in ( CSC165H1/  CSC240H1/  MAT102H5/  MATA67H3/  CSCA67H3))/ 60% or higher in  CSC111H1
+Corequisite: 
+
+
+Title: CSC369H1: Operating Systems
+Prerequisite: CSC209H1/  CSC209H5/  CSCB09H3;  CSC258H1/  CSC258H5/  CSCB58H3
+Corequisite: 
+
+
+Title: CSC457H1: Principles of Computer Networks
+Prerequisite: CSC373H1/  CSC373H5/  CSCC73H3,  STA247H1/  STA255H1/  STA257H1/  STA237H1
+Corequisite: 
+
+
+Title: CSC373H1: Algorithm Design, Analysis & Complexity
+Prerequisite: CSC263H1/  CSC265H1 /  CSC263H5/  CSCB63H3
+Corequisite: 
+
+
+Title: CSC458H1: Computer Networking Systems
+Prerequisite: CSC209H1,  CSC258H1,  CSC263H1/  CSC265H1,  STA247H1/  STA255H1/  STA257H1/  STA237H1/  ECO227Y1
+Corequisite: 
+
+
+Title: CSC368H1: Computer Architecture
+Prerequisite:  CSC209H1,  CSC258H1 
+Corequisite: 
+
+
+Title: CSC385H1: Microprocessor Systems
+Prerequisite: CSC258H1,  CSC209H1
+Corequisite: 
+
+
+Title: CSC443H1: Database System Technology
+Prerequisite: CSC343H1,  CSC369H1,  CSC373H1/ CSC375H1
+Corequisite: 
+
+
+Title: CSC469H1: Operating Systems Design and Implementation
+Prerequisite: CSC369H1
+Corequisite: 
+
+
+Title: CSC488H1: Compilers and Interpreters
+Prerequisite: CSC258H1/  CSC258H5/  CSCB58H3,  CSC324H1/  CSC324H5/  CSCC24H3,  CSC263H1/  CSC265H1/  CSC263H5/  CSCB63H3
+Corequisite: 
+
+
+Title: CSC301H1: Introduction to Software Engineering
+Prerequisite: CSC209H1,  CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: CSC410H1: Software Testing and Verification
+Prerequisite: CSC207H1,  CSC236H1/ CSC240H1
+Corequisite: 
+
+
+Title: CSC417H1: Physics-Based Animation
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/  MAT291H1/ MAT294H1;  MAT223H1/​  MAT240H1/ MAT185H1/ MAT188H1;  CSC209H1/ ​proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: CSC317H1: Computer Graphics
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT292H1/ MAT294H1/ ( MAT232H5/  MAT233H5,  MAT236H5)/ ( MATB41H3,  MATB42H3);  MAT223H1/  MAT240H1/  MAT223H5/  MATA22H3/ MAT185H1/ MAT188H1;  CSC209H1/  CSC209H5/  CSCB09H3/ proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: CSC419H1: Geometry Processing
+Prerequisite: MAT235Y1/  MAT237Y1/  MAT257Y1/ MAT291H1/ MAT294H1;  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1;  CSC209H1/ proficiency in C or C++/ APS105H1/ ESC180H1/  CSC180H1
+Corequisite: 
+
+
+Title: APM462H1: Nonlinear Optimization
+Prerequisite: ( MAT223H1, MAT224H1) / MAT247H1,  MAT235Y1/ MAT237Y1/ MAT257Y1
+Corequisite: 
+
+
+Title: PHY385H1: Introductory Optics
+Prerequisite: PHY250H1,  PHY224H1,  MAT235Y1/  MAT237Y1/  MAT257Y1
+Corequisite: 
+
+
+Title: PHY250H1: Electricity and Magnetism
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY224H1: Practical Physics I
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: PHY231H1/  PHY250H1/  PHY252H1/  PHY254H1/  PHY256H1
+
+
+Title: PHY231H1: Physics of Living Systems
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: PHY252H1: Thermal Physics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY254H1: Classical Mechanics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: PHY256H1: Introduction to Quantum Physics
+Prerequisite: PHY131H1/  PHY151H1,  PHY132H1/  PHY152H1, ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1, ( MAT223H1/  MAT240H1 recommended)
+
+
+Title: PSL440Y1: Neuroscience: Systems and Behaviour
+Prerequisite: PSL300H1/ PSY290H1/ CSB332H1 or equivalent
+Corequisite: 
+
+
+Title: PSL300H1: Human Physiology I
+Prerequisite: 
+Corequisite: 
+
+
+Title: PSY290H1: Behavioural Neuroscience
+Prerequisite: PSY100H1/  PSY100Y5/  PSYA01H3/  COG250Y1
+Corequisite: 
+
+
+Title: PSY280H1: Introduction to Sensation and Perception
+Prerequisite: PSY100H1/  PSY100Y5/  PSYA01H3/  COG250Y1
+Corequisite: 
+
+
+Title: CSC300H1: Computers and Society
+Prerequisite: 0.5 credit in CSC
+Corequisite: 
+
+
+Title: CSC404H1: Introduction to Video Game Design
+Prerequisite: CSC301H1/  CSC317H1/  CSC318H1/  CSC384H1/  CSC417H1/  CSC418H1/  CSC419H1
+Corequisite: 
+
+
+Title: CSC303H1: Social and Information Networks
+Prerequisite: CSC263H1/  CSC265H1/  CSC263H5/  CSCB63H3,  STA247H1/  STA255H1/  STA257H1/  ECO227Y1/  STA237H1/  STAB52H3/  STAB57H3,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: MUS300H1: Music, Media and Technology
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN212H1: Cinema and Sensation I: Action/Spectacle
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN432H1: Advanced Study in Cinema as Social and Cultural Practice
+Prerequisite: At least 10.0 credits, including  CIN105Y1,  CIN201Y1
+Corequisite: CIN301Y1
+
+
+Title: CIN105Y1: Introduction to Film Study
+Prerequisite: 
+Corequisite: 
+
+
+Title: CIN201Y1: Film Cultures I: Art and Industry
+Prerequisite: CIN105Y1
+Corequisite: 
+
+
+Title: CIN301Y1: Film Cultures II: Politics and Global Media
+Prerequisite: CIN105Y1,  CIN201Y1
+Corequisite: 
+
+
+Title: ENG235H1: The Graphic Novel
+Prerequisite: 1.0 ENG credit or any 4.0 credits
+Corequisite: 
+
+
+Title: ECO326H1: Advanced Microeconomics - Game Theory
+Prerequisite: ECO200Y1(70%)/ ECO204Y1/ ECO206Y1;  ECO220Y1(70%)/  ECO227Y1/ ( STA237H1(70%),  STA238H1(70%))/ ( STA247H1(70%),  STA248H1(70%))/ ( STA257H1,  STA261H1)
+Corequisite: 
+
+
+Title: ECO200Y1: Microeconomic Theory
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/  ECO105Y1(80%)/  ECO100Y5(67%)/ ( ECO101H5(63%),  ECO102H5(63%))/ ( MGEA02H3 (67%),  MGEA06H3 (67%));  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO204Y1: Microeconomic Theory and Applications (for Commerce)
+Prerequisite: ( ECO101H1(63%),  ECO102H1(63%))/ ECO105Y1(80%);  MAT133Y1/ ( MAT135H1,  MAT136H1)/  MAT137Y1/  MAT157Y1
+Corequisite: 
+
+
+Title: ECO206Y1: Microeconomic Theory
+Prerequisite: ( ECO101H1(70%),  ECO102H1(70%))/  ECO100Y5(70%)/ ( ECO101H5(70%),  ECO102H5(70%))/ ( MGEA02H3 (70%),  MGEA06H3(70%));  MAT133Y1(63%)/ ( MAT135H1(60%),  MAT136H1(60%))/  MAT137Y1(55%)/  MAT157Y1(55%)
+Corequisite: 
+
+
+Title: RSM482H1: Game Theory for Business Strategy
+Prerequisite: ECO204Y1/ ECO206Y1
+Corequisite: 
+
+
+Title: SOC204H1: Introduction to Qualitative Methods in Sociology
+Prerequisite: SOC100H1+  SOC150H1
+Corequisite: 
+
+
+Title: SOC100H1: Introduction to Sociology I: Sociological Perspectives
+Prerequisite: 
+Corequisite: 
+
+
+Title: SOC150H1: Introduction to Sociology II: Sociological Inquiries
+Prerequisite: SOC100H1
+Corequisite: 
+
+
+Title: CSC302H1: Engineering Large Software Systems
+Prerequisite: CSC301H1
+Corequisite: 
+
+
+Title: CSC316H1: Data Visualization: Foundations and Advanced Programming
+Prerequisite: CSC207H1
+Corequisite: 
+
+
+Title: CSC454H1: The Business of Software
+Prerequisite: 2.5 credits at the 300-level or higher
+Corequisite: 
+
+
+Title: STA313H1: Data Visualization
+Prerequisite: CSC108H1/  CSC110Y1/  CSC120H1/  CSC148H1;  STA238H1/  STA248H1/  STA261H1/  ECO227Y1
+Corequisite: 
+
+
+Title: ENV281H1: Special Topics in Environment
+Prerequisite: Completion of 4.0 credits
+Corequisite: 
+
+
+Title: ENV381H1: Special Topics in Environment
+Prerequisite: Completion of 9.0 credits
+Corequisite: 
+
+
+Title: IRE260H1: Organizational Behaviour
+Prerequisite: 4.0 credits
+Corequisite: 
+
+
+Title: COG260H1: Data, Computation, and the Mind
+Prerequisite: CSC108H1/ CSC148H1
+Corequisite: COG250Y1
+
+
+Title: COG341H1: Issues in Cognitive Science I: Attention, Perception, and Consciousness
+Prerequisite: COG250Y1 and one of  PSY270H1/ PHL342H1
+Corequisite: 
+
+
+Title: COG343H1: Issues in Cognitive Science III: Computational Cognition
+Prerequisite: COG260H1,  CSC148H1,  STA220H1/ PSY201H1
+Corequisite: COG250Y1
+
+
+Title: COG344H1: Issues in Cognitive Science IV: Language and Communication
+Prerequisite: COG250Y1 and one of either  LIN232H1/ LIN241H1 or  JLP315H1/ JLP374H1.
+Corequisite: 
+
+
+Title: LIN232H1: Syntactic Patterns in Language
+Prerequisite: LIN102H1
+Corequisite: 
+
+
+Title: LIN102H1: Introduction to Linguistics: Sentence Structure and Meaning
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN241H1: Introduction to Semantics
+Prerequisite: LIN102H1
+Corequisite: 
+
+
+Title: JLP315H1: Language Acquisition
+Prerequisite: 1.0 credit at the 200+ level in LIN/JAL/JUP/PSL/PSY/COG
+Corequisite: 
+
+
+Title: JLP374H1: Psychology of Language
+Prerequisite: 1.0 credit from  LIN228H1,  LIN229H1,  LIN232H1,  LIN241H1,  PSY260H1,  PSY270H1,  PSY280H1,  PSY290H1,  COG250Y1
+Corequisite: 
+
+
+Title: LIN228H1: Phonetics
+Prerequisite: 
+Corequisite: 
+
+
+Title: LIN229H1: Phonological Patterns in Language
+Prerequisite: LIN101H1,  LIN228H1
+Corequisite: 
+
+
+Title: PSY260H1: Introduction to Learning and Plasticity
+Prerequisite: PSY100H1/ PSY100Y5/ PSYA01H3/ COG250Y1
+Corequisite: 
+
+
+Title: CSC436H1: Numerical Algorithms
+Prerequisite: CSC336H1/ CSC350H1
+Corequisite: 
+
+
+Title: CSC446H1: Computational Methods for Partial Differential Equations
+Prerequisite: CSC351H1/ ( CSC336H1 (75%))/ equivalent mathematical background;  MAT237Y1/  MAT257Y1;  APM346H1/  MAT351Y1/ ( MAT244H1/  MAT267H1 and exposure to PDEs)
+Corequisite: 
+
+
+Title: APM346H1: Partial Differential Equations
+Prerequisite: MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3)/  MAT237Y1/  MAT237Y5/  MAT257Y1, ( MAT244H1/  MATB44H3/  MAT244H5/  MAT267H1)
+Corequisite: 
+
+
+Title: MAT244H1: Introduction to Ordinary Differential Equations
+Prerequisite: ( MAT133Y1/  MAT135H1/  MAT135H5/  MATA35H3/  MATA30H3/  MATA31H3,  MAT136H1/  MAT136H5/  MATA36H3/  MATA37H3)/  MAT135Y5/  MAT137Y1/  MAT137Y5/ ( MAT137H5,  MAT139H5)/  MAT157Y1/  MAT157Y5/ ( MAT157H5,  MAT159H5),  MAT223H1/  MATA23H3/  MAT223H5/  MAT240H1/  MAT240H5
+Corequisite: MAT235Y1/  MAT237Y1/  MAT257Y1
+
+
+Title: MAT267H1: Advanced Ordinary Differential Equations
+Prerequisite: MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5,  MAT247H1/  MAT247H5
+Corequisite: MAT257Y1
+
+
+Title: MAT351Y1: Partial Differential Equations
+Prerequisite: MAT257Y1/  MAT237Y1 (85%),  MAT267H1
+Corequisite: 
+
+
+Title: CSC456H1: High-Performance Scientific Computing
+Prerequisite: CSC436H1/ ( CSC336H1 (75%))/ equivalent mathematical background;  CSC209H1/ proficiency in C, C++, or Fortran
+Corequisite: 
+
+
+Title: CSC466H1: Numerical Methods for Optimization Problems
+Prerequisite: CSC336H1,  MAT223H1/  MAT240H1,  MAT235Y1/  MAT237Y1/  MAT257Y1
+Corequisite: 
+
+
+Title: MAT334H1: Complex Variables
+Prerequisite: MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5,  MAT235Y1/ MAT235Y5/( MAT232H5,  MAT236H5)/( MATB41H3,  MATB42H3)/ MAT237Y1/( MATB41H3,  MATB42H3,  MATB43H3)/ MAT237Y5/ MAT257Y1
+Corequisite: 
+
+
+Title: MAT354H1: Complex Analysis I
+Prerequisite: MAT257Y1
+Corequisite: 
+
+
+Title: MAT337H1: Introduction to Real Analysis
+Prerequisite: MAT257Y1/ [ MAT224H1/  MATA24H3/  MAT224H5/  MAT247H1/  MAT247H5,  MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3/  MATB43H3)/  MAT237Y1/  MAT237Y5,  MAT246H1/  MAT157Y1]
+Corequisite: 
+
+
+Title: MAT357H1: Foundations of Real Analysis
+Prerequisite: MAT257Y1
+Corequisite: 
+
+
+Title: CSC308H1: Technology Leadership
+Prerequisite: CSC207H1
+Corequisite: 
+
+
+Title: CSC490H1: Capstone Design Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC491H1: Capstone Design Project
+Prerequisite: 
+Corequisite: CSC454H1/ CSC2527H
+
+
+Title: CSC494H1: Computer Science Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC495H1: Computer Science Project
+Prerequisite: CSC494H1. 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC494Y1: Computer Science Project
+Prerequisite: 1.5 credits of 300+ level CSC courses.
+Corequisite: 
+
+
+Title: CSC463H1: Computational Complexity and Computability
+Prerequisite: CSC236H1/  CSC240H1/  CSC236H5/  CSCB36H3
+Corequisite: 
+
+
+Title: CSC310H1: Information Theory
+Prerequisite: 60% or higher in  CSC148H1/ 60% or higher in  CSC111H1/ ESC190H1,  CSC263H1/  CSC265H1/ ECE345H1/ ECE358H1/ MIE245H1,  MAT223H1/  MAT240H1/ MAT185H1/ MAT188H1
+Corequisite: 
+
+
+Title: CSC438H1: Computability and Logic
+Prerequisite: ( CSC363H1/  CSC463H1)/  CSC365H1/  CSC373H1/  CSC375H1/  MAT247H1
+Corequisite: 
+
+
+Title: MAT309H1: Introduction to Mathematical Logic
+Prerequisite: MAT257Y1/ [ MAT223H1/  MATA23H3/  MAT223H5/  MAT240H1/  MAT240H5,  MAT235Y1/  MAT235Y5/ ( MAT232H5,  MAT236H5)/ ( MATB41H3,  MATB42H3/  MATB43H3)/  MAT237Y1/  MAT237Y5,  MAT246H1/  MAT157Y1/ ( MAT157H5,  MAT159H5)/  MAT157Y5/  CSC236H1/  CSC240H1]
+Corequisite: 
+
+
+Title: CSC448H1: Formal Languages and Automata
+Prerequisite: CSC236H1/ CSC240H1,  CSC263H1/ CSC265H1
+Corequisite: 
+
+
+Title: CSC473H1: Advanced Algorithm Design
+Prerequisite: CSC373H1,  MAT223H1/  MAT240H1
+Corequisite: 
+
+
+Title: MAT332H1: Introduction to Graph Theory
+Prerequisite: MAT224H1/ MATB24H3/ MAT224H5/ MAT247H1/ MAT247H5
+Corequisite: 
+
+
+Title: MAT344H1: Introduction to Combinatorics
+Prerequisite: MAT223H1/ MATA23H3/ MAT223H5/ MAT240H1/ MAT240H5
+Corequisite: 
+
+

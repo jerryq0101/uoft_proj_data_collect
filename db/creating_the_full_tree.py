@@ -54,7 +54,7 @@ def create_course(tx, code, full_name):
 and_counter = 1
 or_counter = 1
 
-titles_dict = {}
+titles_dict = output_titles_dict
 
 def main():
     global and_counter
@@ -86,32 +86,18 @@ def main():
             """)
             set_latest_and_or_indexes(result)
             
-            # # Top Level
-            # for i in range(len(all_codes)):
-            #     capital_course_code = all_codes[i]
-
-            #     # Check if the course already has its prerequisites loaded
-            #     already_processed_into_graph = session.execute_read(already_loaded_with_prerequisites, capital_course_code)
-
-            #     if not already_processed_into_graph:
-            #         current_pre_list = globals()[all_prereq_var_names[i]]
-
-            #         obj = build_graph(current_pre_list, session, capital_course_code)
-
-            #         # Add obj and a containment relationship to the current node
-            #         session.execute_write(add_to_this_course, obj, all_codes[i], titles_dict[all_codes[i]])
-
+            # Top Level
+            for i in range(len(all_codes)):
+                capital_course_code = all_codes[i]
+                
             # corequisite testing
             # function to check did a single course already do its prerequisite looping
             
-            # Then check if that other function works
-            # Then check if the corequisite function works
             mat247test = session.execute_read(already_loaded_with_corequisites, "MAT247H1")
             assert mat247test == True, "Should be true"
 
             phy256test = session.execute_read(already_loaded_with_corequisites, "PHY256H1")
             assert phy256test == True, "Should also be true"
-
 
             # current_cor_list = globals()["mat247h1_cor"]
             # obj = build_corequisites(current_cor_list, session, "MAT247H1")
@@ -120,11 +106,29 @@ def main():
             # current_cor_list_2 = globals()["phy256h1_cor"]
             # obj_2 = build_corequisites(current_cor_list_2, session, "PHY256H1")
             # session.execute_write(add_co_to_this_course, obj_2, "PHY256H1", titles_dict["PHY256H1"]) # type: ignore
-            
-            
+
 
 """
-Syncs the latest AND + OR indexes in the database to here, so that there is no duplication indexing issues 
+Entire process of checking if prerequisites are already loaded, building the prerequisite tree, adding the prerequisite tree to the root node. (Note still have to call the and or function helper)
+"""
+def total_prerequisites_process_singular_course(session, code):
+    global titles_dict
+
+    # Check if course already has prerequisites loaded
+    already_has_prereqs = session.execute_write(already_loaded_with_prerequisites, code)
+
+    # At this point, the node might not exist, or it might exist with no prerequisites yet
+
+    # Build the prerequisite tree
+    if not already_has_prereqs:
+        processed_pre_string = process_code_prereq(code)
+        current_pre_list = globals()[processed_pre_string]
+        obj = build_graph(current_pre_list, session, code)
+        # Add the prerequisite tree to the root course
+        session.execute_write(add_to_this_course, obj, code, titles_dict[code]) # type: ignore
+
+"""
+Syncs the latest AND + OR indexes in the database to here, so that there is no duplication indexing issues. Call this before any insertion operation.
 """
 def set_latest_and_or_indexes(result):
     global and_counter
@@ -179,7 +183,9 @@ def add_to_this_course(tx, obj, code, full_title):
         code=code
     ).data()[0]['exists']
 
-    if node_exists:
+    if node_exists and obj is not None:
+        # node exists, list of pre/cor is not empty => match + add relationship
+
         # match to it and add a containment relationship
         # obj should be a dict with "type": "AND", because the pre and coreq list are always lists
         tx.run(
@@ -192,7 +198,9 @@ def add_to_this_course(tx, obj, code, full_title):
             index=obj["index"],
             parent=code
         )
-    else:
+    elif not node_exists and obj is not None:
+        # node not exist and list of pre/cor is not empty => create + add relationship
+
         # create the course and add a containment relationship
         tx.run(
             """
@@ -206,6 +214,17 @@ def add_to_this_course(tx, obj, code, full_title):
             parent=code,
             full_title=full_title
         )
+    elif not node_exists and obj is None:
+        # node not exist, and list of corequisites is empty => create a node and add nothing
+        tx.run(
+            """
+                CREATE (c:Course {code: $code, full_name: $full_title})
+            """,
+            code=code,
+            full_title=full_title
+        )
+    else:
+        return
 
 
 """
@@ -214,6 +233,7 @@ Recursion on the list items of prerequisites to build a prerequisite tree for on
 def build_graph(item, session, relationship_code):
     global or_counter
     global and_counter
+    global titles_dict
 
     item_type = type(item)
     
@@ -238,8 +258,9 @@ def build_graph(item, session, relationship_code):
     elif item_type == list:
         # we know that this is an AND relationship
         
-        # Make a new AND node, 
-        # Create contains relationship with all of the children
+        # Case when pre / coreq array is empty (when first called) => Return nothing 
+        if not item:
+            return
         
         results = []
         for e in item:
@@ -542,6 +563,11 @@ def build_corequisites(item, session, relationship_code):
             "code": item
         }
     elif item_type == list:
+
+        # Case: When pre / coreq array is empty (when first called) => return Nothing 
+        if not item:
+            return 
+        
         results = []
         for e in item:
             result = build_corequisites(e, session, relationship_code)
@@ -570,6 +596,25 @@ def build_corequisites(item, session, relationship_code):
 
 
 """
+Entire process of checking if corequiites are already loaded, building the corequisites tree, adding the corequisite tree to the root node
+"""
+def total_corequisites_process_singular_course(session, code):
+    global titles_dict
+
+    # Check if course already has corequisites loaded
+    already_has_coreqs = session.execute_write(already_loaded_with_corequisites, code)
+
+    # At this point, the node might not exist, or it might exist with no prerequisites yet
+
+    # Build the corequisites tree
+    if not already_has_coreqs:
+        processed_coreq_string = process_code_coreq(code)
+        current_cor_list = globals()[processed_coreq_string]
+        obj = build_corequisites(current_cor_list, session, code)
+        # Add the corequisites tree to the root course
+        session.execute_write(add_co_to_this_course, obj, code, titles_dict[code]) # type: ignore
+
+"""
 Adds the corequisite tree to the root course, after finishing constructing the tree
 """
 def add_co_to_this_course(tx, obj, code, full_title):
@@ -582,7 +627,9 @@ def add_co_to_this_course(tx, obj, code, full_title):
         code=code
     ).data()[0]['exists']
 
-    if node_exists:
+    if node_exists and obj is not None:
+        # node exists, list of pre/cor is not empty => match + add relationship
+
         # match to it and add a containment relationship
         # obj should be a dict with "type": "AND", because the pre and coreq list are always lists
         tx.run(
@@ -595,7 +642,9 @@ def add_co_to_this_course(tx, obj, code, full_title):
             index=obj["index"],
             parent=code
         )
-    else:
+    elif not node_exists and obj is not None:
+        # node not exist and list of pre/cor is not empty => create + add relationship
+
         # create the course and add a containment relationship
         tx.run(
             """
@@ -609,6 +658,18 @@ def add_co_to_this_course(tx, obj, code, full_title):
             parent=code,
             full_title=full_title
         )
+    elif not node_exists and obj is None:
+        # node not exist, and list of corequisites is empty => create a node and add nothing
+        tx.run(
+            """
+                CREATE (c:Course {code: $code, full_name: $full_title})
+            """,
+            code=code,
+            full_title=full_title
+        )
+    else:
+        return
+
 
 """
 Checks whether a course already has its corequisites loaded
