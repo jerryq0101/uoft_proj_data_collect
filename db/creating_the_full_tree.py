@@ -103,17 +103,25 @@ def main():
 
             # corequisite testing
             # function to check did a single course already do its prerequisite looping
-            # First check if build_prerequisite works
+            
             # Then check if that other function works
+            # Then check if the corequisite function works
+            mat247test = session.execute_read(already_loaded_with_corequisites, "MAT247H1")
+            assert mat247test == True, "Should be true"
 
-            current_cor_list = globals()["mat247h1_cor"]
-            obj = build_corequisites(current_cor_list, session, "MAT247H1")
-            session.execute_write(add_to_this_course, obj, "MAT247H1", titles_dict["MAT247H1"]) # type: ignore
+            phy256test = session.execute_read(already_loaded_with_corequisites, "PHY256H1")
+            assert phy256test == True, "Should also be true"
+
+
+            # current_cor_list = globals()["mat247h1_cor"]
+            # obj = build_corequisites(current_cor_list, session, "MAT247H1")
+            # session.execute_write(add_co_to_this_course, obj, "MAT247H1", titles_dict["MAT247H1"]) # type: ignore
 
             # current_cor_list_2 = globals()["phy256h1_cor"]
             # obj_2 = build_corequisites(current_cor_list_2, session, "PHY256H1")
-            # session.execute_write(add_to_this_course, obj_2, "PHY256H1", titles_dict["PHY256H1"]) # type: ignore
-
+            # session.execute_write(add_co_to_this_course, obj_2, "PHY256H1", titles_dict["PHY256H1"]) # type: ignore
+            
+            
 
 """
 Syncs the latest AND + OR indexes in the database to here, so that there is no duplication indexing issues 
@@ -601,6 +609,24 @@ def add_co_to_this_course(tx, obj, code, full_title):
             parent=code,
             full_title=full_title
         )
+
+"""
+Checks whether a course already has its corequisites loaded
+"""
+def already_loaded_with_corequisites(tx, code):
+    node_exists = check_if_exists(tx, code)
+    if node_exists:
+        relationship_exists = tx.run(
+            """
+                MATCH (c:Course {code: $code})-[:Coreqs_With {root: $code}]->(and:AND)
+                WITH COUNT(and) > 0 as exists
+                RETURN exists
+            """,
+            code=code
+        ).data()[0]['exists']
+        return relationship_exists
+    else:
+        return False
 
 
 if __name__ == "__main__":
