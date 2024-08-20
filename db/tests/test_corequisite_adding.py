@@ -51,12 +51,7 @@ class TestCoreqBuilding(unittest.TestCase):
         """)
         set_latest_and_or_indexes(result)
 
-    # def test_fetching_data(self):
-    #     # Example test method using the session
-    #     result = self.session.run("MATCH (n) RETURN count(n) AS count")
-    #     count = result.single()["count"]
-    #     self.assertEqual(count, 9)
-    
+
     # Test build corequisites
     def test_build_corequisites_1(self):
         # Build entire_corequisite process
@@ -159,7 +154,7 @@ class TestCoreqBuilding(unittest.TestCase):
 
     # Test build corequisites 5 CSC240 (hard case, existing root, mixed corequisites)
     def test_build_corequisites_5(self):
-        if not already_loaded_with_corequisites(self.session, "CSC240H1"):
+        if not self.session.execute_read(check_if_exists, "CSC240H1"):
             self.driver.execute_query("CREATE (n:Course {code: $code, full_name: $full_name}) RETURN n", code="CSC240H1", full_name=titles_dict["CSC240H1"])
 
         total_corequisites_process_singular_course(self.session, "CSC240H1")
@@ -196,9 +191,42 @@ class TestCoreqBuilding(unittest.TestCase):
         paths = self.driver.execute_query("MATCH (n)-[p:Coreqs_With {root: $root}]->(m) RETURN count(p) as count", root="CSC240H1")
         count = paths.records[0]["count"]
         self.assertEqual(count, 7, "There should be 7 paths that has coreqs_with CSC240H1")
+
+        # Check each coreq path is correct
+        path = self.driver.execute_query("MATCH (n:Course {code: $code})-[p:Coreqs_With {root: $root}]->(m:AND) RETURN count(p) as count", root="CSC240H1", code="CSC240H1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 1, "There should be 1 path from CSC240H1 to an AND node")
+
+        path = self.driver.execute_query("MATCH (n:AND)-[p:Coreqs_With {root: $root}]->(m:OR) RETURN count(p) as count", root="CSC240H1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 2, "There should be 1 path AND to OR node")
+
+        path = self.driver.execute_query("MATCH (n:OR)-[p:Coreqs_With {root: $root}]->(m:Course {code: $code}) RETURN count(p) as count", root="CSC240H1", code="CSC111H1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 1, "There should be 1 path from OR to CSC111H1")
+
+        path = self.driver.execute_query("MATCH (n:OR)-[p:Coreqs_With {root: $root}]->(m:Course {code: $code}) RETURN count(p) as count", root="CSC240H1", code="CSC148H1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 1, "There should be 1 path from OR to CSC148H1")
+
+        path = self.driver.execute_query("MATCH (n:OR)-[p:Coreqs_With {root: $root}]->(m:Course {code: $code}) RETURN count(p) as count", root="CSC240H1", code="MAT137Y1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 1, "There should be 1 path from OR to MAT137Y1")
+
+        path = self.driver.execute_query("MATCH (n:OR)-[p:Coreqs_With {root: $root}]->(m:Course {code: $code}) RETURN count(p) as count", root="CSC240H1", code="MAT157Y1")
+        count = path.records[0]["count"]
+        self.assertEqual(count, 1, "There should be 1 path from OR to MAT157Y1")
+
+
     
     # More tests for elementary functions here
-
+    def test_already_loaded_with_corequisites(self):
+        # Case 1: node not exist
+        self.assertFalse(self.session.execute_read(already_loaded_with_corequisites, "CSC420H1"))
+        # Case 2: node exists ^ not loaded with corequisites
+        self.assertFalse(self.session.execute_read(already_loaded_with_corequisites, "MAT377H1"))
+        # Case 3: node exists ^ loaded with corequisites
+        self.assertTrue(self.session.execute_read(already_loaded_with_corequisites, "MAT247H1"))
 
 if __name__ == '__main__':
     unittest.main()

@@ -78,35 +78,21 @@ def main():
 
         with driver.session(database="neo4j") as session:
             assert (len(all_codes) == len(all_prereq_var_names) == len(all_coreq_var_names)), "Lengths of all_codes, all_prereq_var_names, and all_coreq_var_names should be the same"
-            
+
             # Sets the latest AND OR indexes in the database here
             result = driver.execute_query("""
                 MATCH (and:AND), (or:OR)
                 RETURN max(and.index) AS max_and_index, max(or.index) AS max_or_index
             """)
             set_latest_and_or_indexes(result)
-            
+
             # Top Level
             for i in range(len(all_codes)):
                 capital_course_code = all_codes[i]
+                total_prerequisites_process_singular_course(session, capital_course_code)
+                total_corequisites_process_singular_course(session, capital_course_code)
                 
-            # corequisite testing
-            # function to check did a single course already do its prerequisite looping
             
-            mat247test = session.execute_read(already_loaded_with_corequisites, "MAT247H1")
-            assert mat247test == True, "Should be true"
-
-            phy256test = session.execute_read(already_loaded_with_corequisites, "PHY256H1")
-            assert phy256test == True, "Should also be true"
-
-            # current_cor_list = globals()["mat247h1_cor"]
-            # obj = build_corequisites(current_cor_list, session, "MAT247H1")
-            # session.execute_write(add_co_to_this_course, obj, "MAT247H1", titles_dict["MAT247H1"]) # type: ignore
-
-            # current_cor_list_2 = globals()["phy256h1_cor"]
-            # obj_2 = build_corequisites(current_cor_list_2, session, "PHY256H1")
-            # session.execute_write(add_co_to_this_course, obj_2, "PHY256H1", titles_dict["PHY256H1"]) # type: ignore
-
 
 """
 Entire process of checking if prerequisites are already loaded, building the prerequisite tree, adding the prerequisite tree to the root node. (Note still have to call the and or function helper)
@@ -541,6 +527,7 @@ def gather_co_new_and_block(tx, array, index, relationship_code):
                 parent=relationship_code
             )
 
+
 """
 Recursive function for corequisites
 
@@ -613,6 +600,7 @@ def total_corequisites_process_singular_course(session, code):
         obj = build_corequisites(current_cor_list, session, code)
         # Add the corequisites tree to the root course
         session.execute_write(add_co_to_this_course, obj, code, titles_dict[code]) # type: ignore
+
 
 """
 Adds the corequisite tree to the root course, after finishing constructing the tree
