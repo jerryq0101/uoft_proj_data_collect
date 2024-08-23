@@ -217,8 +217,6 @@ class TestCoreqBuilding(unittest.TestCase):
         count = path.records[0]["count"]
         self.assertEqual(count, 1, "There should be 1 path from OR to MAT157Y1")
 
-
-    
     # More tests for elementary functions here
     def test_already_loaded_with_corequisites(self):
         # Case 1: node not exist
