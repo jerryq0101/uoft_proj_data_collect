@@ -89,11 +89,11 @@ class Video(Resource):
             abort(404, description="Video doesn't exist, cannot delete")
         db.session.delete(result)
         db.session.commit()
-        
+
         return "", 204
 
 
 api.add_resource(Video, "/video/<int:video_id>")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
