@@ -1,5 +1,4 @@
 # Test if it reads the focus page correctly
-# Already tested the crawl features
 
 import unittest
 
@@ -28,7 +27,8 @@ focuses = {
 class TestFocusExplore(unittest.TestCase):
     def setUp(self):
         self.test = FocusExplore()
-    
+
+
     def test_links_in_focus_ai(self):
         title = "AI"
         result_links = self.test.links_in_focus(focuses[title])
@@ -74,6 +74,7 @@ class TestFocusExplore(unittest.TestCase):
         
         self.assertEqual(expected_links, {})
 
+
     def test_links_in_focus_nlp(self):
         title = "NLP"
         result_links = self.test.links_in_focus(focuses[title])
@@ -99,6 +100,7 @@ class TestFocusExplore(unittest.TestCase):
             result_links[i] = result_links[i].lower()
 
         self.assertEqual(expected_links, result_links, "Expected links should equal to result links")
+
 
     def test_links_in_focus_cs(self):
         title = "CS"
@@ -126,6 +128,7 @@ class TestFocusExplore(unittest.TestCase):
             result_links[i]  = result_links[i].lower()
         
         self.assertEqual(result_links, expected_links)
+
 
     def test_links_in_focus_cv(self):
         title = "CV"
@@ -161,7 +164,6 @@ class TestFocusExplore(unittest.TestCase):
 
         self.assertEqual(expected_links, result_links, "Expected links should equal to result links")
 
-    # def test_links_in_focus_gd(self):
 
     def test_links_in_focus_hci(self):
         title = "HCI"
@@ -207,10 +209,7 @@ class TestFocusExplore(unittest.TestCase):
 
         self.assertEqual(expected_links, {})
 
-    # def test_links_in_focus_sc(self):
 
-    # def test_links_in_focus_tli(self):
-    
     def test_links_in_focus_toc(self):
         title = "ToC"
         result_links = self.test.links_in_focus(focuses[title])
@@ -246,7 +245,6 @@ class TestFocusExplore(unittest.TestCase):
 
         self.assertEqual(expected_links, {})
 
-    # def test_links_in_focus_wit(self):
 
     def test_everything(self):
         # Crawl everything and see if the lengths match up
@@ -277,6 +275,7 @@ class TestFocusExplore(unittest.TestCase):
         print(self.test.course_explore.visited)
 
         return title_list
+
 
 if __name__ == "__main__":
     unittest.main()

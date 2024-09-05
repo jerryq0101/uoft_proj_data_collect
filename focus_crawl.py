@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from crawl import CourseExplore
 
+# Global Variables that is accessed.
 base_url = "https://artsci.calendar.utoronto.ca"
 eng_courses = {
     "AER": True,
@@ -50,18 +51,33 @@ focuses = {
     "WIT": "Focus in Web and Internet Technologies (Major) - ASFOC1689S"
 }
 
-# A Class that crawls from the focus page
 
 class FocusExplore:
     """
-        Purpose: To crawl a single focus url and multiple focus urls
-        Course Explore variable
+        A class that contains a set of functions to crawl from the focus page
+
+        Instance Variables:
+        - course_explore (CourseExplore): An instance of the CourseExplore class that crawls down course pages. 
+        
     """
     def __init__(self):
+        """
+            Initializes the FocusExplore class
+        """
         self.course_explore = CourseExplore()
+
 
     # Only support major for now
     def links_in_focus(self, title):
+        """
+            On the focus page, find the links to all the courses that are related to the focus.
+
+            Args:
+                title (str): The title of the focus page
+
+            Returns:
+                list: A list of links to the courses that are related to the focus.
+        """
         pg = requests.get("https://artsci.calendar.utoronto.ca/section/Computer-Science")
         s_html = BeautifulSoup(pg.text,"html.parser")
         # print(s_html.prettify())
@@ -69,13 +85,6 @@ class FocusExplore:
             "aria-label": title
         })
 
-        # Get all a tags in the parents
-        # And then loop through, filter out utm/utsc/engineering courses
-        # return links
-        # we don't care about the credit requirement or any other requirement right now that is all frontend.
-
-        # Full details is two levels up
-        # print(thing.parent.parent.prettify())
         focus_page = thing.parent.parent
         all_related_courses_tags = focus_page.find_all("a")
         # print(all_related_courses_tags)
@@ -93,7 +102,20 @@ class FocusExplore:
 
         return filtered_links
 
+
     def crawl_focus_w_pre(self, title):
+        """
+            Crawl the focus page using the prerequisite traversal method. Automatically gathers the title and prereq list and other course data. 
+
+            Args:
+                title (str): The title of the focus page
+
+            Returns:
+                dict: A dictionary containing the title list and the prereq list
+
+            Note:
+            - Each index maps to each individual course's title data and prereq data. (e.g. title_list[0] is the title of the first course in the focus, prereq_list[0] is the prerequisite list of the first course that is travelled through)
+        """
         links_arr = self.links_in_focus(title)
         
         for link in links_arr:
@@ -105,7 +127,17 @@ class FocusExplore:
             "prereq_list": self.course_explore.prereq_list
         }
 
+
     def crawl_focus_w_cor(self, title):
+        """
+            Crawl the focus page using traversal method (inclusive of prereq and coreq). Automatically gathers the title, coreq list, prereq list and other course data.
+
+            Args:
+                title (str): The title of the focus page
+
+            Returns:
+                dict: A dictionary containing the title list, prereq list, and coreq list that is traversed through (each index mapping to each individual course).
+        """
         links_arr = self.links_in_focus(title)
         for link in links_arr:
             # For each link, check if its visited
@@ -121,7 +153,14 @@ class FocusExplore:
             "coreq_list": self.course_explore.coreq_list
         }
 
+
     def crawl_focus_w_cor_full(self):
+        """
+            Crawl the focus page, inclusive of prereq, coreq, and exclusions. Automatically gathers the title, coreq list, prereq list (no exclusion list here) and other course data.
+
+            Returns:
+                dict: A dictionary containing the title list, prereq list, and coreq list that is traversed through (each index mapping to each individual course).
+        """
         # Crawl everything and see if the lengths match up
         for title in focuses.values():
             self.crawl_focus_w_cor(title)
@@ -131,6 +170,7 @@ class FocusExplore:
             "prereq_list": self.course_explore.prereq_list,
             "coreq_list": self.course_explore.coreq_list
         }
+
 
 if __name__ == "__main__":
     test = FocusExplore()
