@@ -1,10 +1,11 @@
-# Description: General Helper functions that don't use Neo4j Session.
+# Description: General Helper functions that don't use a Neo4j Session.
 from focus_crawl import FocusExplore
 
-"""
-Finds full titles, and splits to get the upper case course code. (Also make the titles_dict, which is used for recursion)
-"""
+
 def explore_all_focuses():
+    """
+    Finds full titles, and splits to get the upper case course code. (Also make the titles_dict, which is used for recursion)
+    """
     var = FocusExplore()
     titles_dict = {}
     titles = var.crawl_focus_w_cor_full()["titles"]
@@ -21,10 +22,16 @@ def explore_all_focuses():
 
 
 def process_code_prereq(code):
+    """
+    Converts the course code to lowercase and appends "_pre" to it. For accessing output.py variable
+    """
     code = code.lower()
     return code + "_pre"
 
 
 def process_code_coreq(code):
+    """
+    Converts the course code to lowercase and appends "_cor" to it. For accessing output.py variable
+    """
     code = code.lower()
     return code + "_cor"
