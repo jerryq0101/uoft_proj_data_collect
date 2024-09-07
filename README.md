@@ -96,7 +96,7 @@ Simply run `crawl.py` for the CSC240H1 lineage of courses.
 
 First I scraped the academic calendar, this generates a compiled list of english descriptions for each course in `files/output.txt`.
 
-- The code for the above process can be found in `/tests/test_focus_explore.py` Line 257
+- The code for the above process can be found in `/tests/test_focus_explore.py` [Line 257](./scraping/tests/test_focus_explore.py#L257)
 
 Due to UofT's inconsistent prerequisite description syntax, I converted the prerequisite relationships into parsable data by human labor in `files/output.py`.
 
