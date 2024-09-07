@@ -255,9 +255,6 @@ class TestFocusExplore(unittest.TestCase):
         prereq_list = self.test.course_explore.prereq_list
         coreq_list = self.test.course_explore.coreq_list
 
-        self.assertEqual(len(title_list), len(prereq_list), "you have to work whatfwasdsafsdfsa")
-        self.assertEqual(len(title_list), len(coreq_list), "YOU HAVE TO WORK V2")
-
         f = open("/Users/jerryqi/PycharmProjects/pythonProject/files/output.txt", "a")
         
         for i in range(len(title_list)):

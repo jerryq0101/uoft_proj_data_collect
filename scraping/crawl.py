@@ -48,11 +48,10 @@ class CourseExplore:
 
     Attributes:
         visited (dict): A dictionary to keep track of visited courses.
-        prereq_list (list): A list to store the prerequisites of a course.
-        title_list (list): A list to store the titles of a course.
-        excl_list (list): A list to store the exclusions of a course.
-        coreq_list (list): A list to store the corequisites of a course.
-        br_list (list): A list to store the breadth requirements of a course.
+        prereq_list (list): A list to store the prerequisites of a course at index i
+        title_list (list): A list to store the titles of a course at index i
+        excl_list (list): A list to store the exclusions of a course at index i
+        coreq_list (list): A list to store the corequisites of a course at index i
     """
 
 
@@ -69,7 +68,6 @@ class CourseExplore:
         self.title_list = []
         self.excl_list = []
         self.coreq_list = []
-        self.br_list = []
 
 
     def reset_crawl(self):
@@ -81,7 +79,7 @@ class CourseExplore:
         self.title_list = []
         self.excl_list = []
         self.coreq_list = []
-        self.br_list = []
+
 
 
     def print_results(self):

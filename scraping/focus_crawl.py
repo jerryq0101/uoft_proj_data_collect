@@ -175,5 +175,15 @@ class FocusExplore:
 if __name__ == "__main__":
     test = FocusExplore()
     title = focuses["ToC"]
-    print(test.links_in_focus(title))
+    print(test.crawl_focus_w_cor(title))
+
+    title_list = test.course_explore.title_list
+    prereq_list = test.course_explore.prereq_list
+    coreq_list = test.course_explore.coreq_list
+
+    for i in range(len(title_list)):
+        print("Title:", title_list[i])
+        print("Prerequisite:", prereq_list[i])
+        print("Corequisite:", coreq_list[i])
+        print("\n\n")
 
