@@ -1,16 +1,27 @@
-
 # Prerequisite Visualizer (UofT) - Data Processing
 
+---
+
 ### Scripts used for UofT data scraping and uploading to DB
+
+### Table of Contents
+- [Description](#description)
+- [Files](#files)
+- [Key Features](#key-features)
+- [Setup and Usage](#setup-and-usage)
+  - [Dependencies](#dependencies)
+  - [Scraping](#scraping)
+  - [Loading the Neo4j Database](#loading-the-neo4j-database-with-course-data)
+- [Results and Understanding](#results-and-understanding)
 
 ---
 
 #### Description
 
-This repository contains the scripts used to scrape data from individual University of Toronto (UofT) course pages and upload them to a Neo4j database. These scripts are part of a larger project aimed at visualizing course prerequisites.
+This repository contains the scripts used to scrape data from individual University of Toronto (UofT) course pages and upload them to a Neo4j database. These scripts are part of a larger project aimed at visualizing course prerequisites. (ADD LINKS TO OTHER REPOS)
 
 
-#### Files
+#### Directory
 
 - ``scraping/``: Contains scripts that fetch data from UofT pages and store them in the files/ folder.
 - `db/`: Contains scripts that parse data from the files/ folder and create nodes and relationships in the Neo4j database.
@@ -134,5 +145,5 @@ Corequisite: Recommended:  MAT223H1/  MAT240H1,  MAT235Y1/  MAT237Y1/  ECO210H1
 
 By gathering all the direct prerequisite, and direct corequisite data of computer science majors, we can upload them to Neo4j and take advantage of its ability to traverse through graphs. 
 
-This allows us to full prerequisite trees for each course instead of just a direct prerequisite tree.
+This allows us to generate full prerequisite trees for each course instead of just a direct prerequisite tree that we can see on the browser.
 
