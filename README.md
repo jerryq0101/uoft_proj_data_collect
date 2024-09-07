@@ -2,7 +2,7 @@
 
 ---
 
-### Scripts used for UofT data scraping and uploading to DB
+### Scripts used for UofT data scraping and uploading to Neo4j DB
 
 ### Table of Contents
 - [Description](#description)
@@ -84,9 +84,9 @@ for i in range(len(title_list)):
 
 ```
 
-Simply run `focus_crawl.py` to get all of the Theory of Computing Courses and all possible prerequisites in a printed form in the console. (Or modify it for your own use case at [Line 176](./scraping/focus_crawl.py#L176))
+Simply run `focus_crawl.py` to get all the Theory of Computing Courses and all possible prerequisites in a printed form in the console. (Or modify it for your own use case at [Line 176](./scraping/focus_crawl.py#L176))
 
-For targetting more individualized examples, you can run `crawl.py`, which allows one to find the prerequisite lineage of specific Arts and Science Course URLs.
+For targeting more individualized examples, you can run `crawl.py`, which allows one to find the prerequisite lineage of specific Arts and Science Course URLs.
 
 ```python
 # crawl.py Line 364
@@ -105,7 +105,7 @@ Simply run `crawl.py` for the CSC240H1 lineage of courses. (Or modify it for you
 
 #### Loading the Neo4j Database with Course Data
 
-First I scraped the academic calendar, this generates a compiled list of english descriptions for each course in `files/output.txt`.
+First I scraped the academic calendar, this generates a compiled list of English descriptions for each course in `files/output.txt`.
 
 - The code for the above process can be found in `/tests/test_focus_explore.py` [Line 249](./scraping/tests/test_focus_explore.py#L249)
 
@@ -128,11 +128,11 @@ I am going to explain what I mean earlier by "all possible prerequisites" or "li
 
 The scraping functions attempts to collect direct prerequisite data from each course page. It simultaneously collects each of those course links to traverse to next. Next and next. 
 
-At the end, allowing us to collect data for all possible prereq courses (and prereqs of prereqs and so on) of the starting courses.
+At the end, allowing us to collect data for all possible prereq courses (and prereqs of prereqs and so on) of the queried courses.
 
 In `focus_crawl.py`, I chose the Computer Science focus courses for undergrad to traverse through, capturing all possibilities of courses for Computer science majors.
 
-All of the course data will be in several lists. (title_list, prereq_list, coreq_list). 
+All the course data will be in several lists. (title_list, prereq_list, coreq_list). 
 
 The data at each index of these lists are data for one course.
 
