@@ -73,7 +73,7 @@ for i in range(len(title_list)):
 
 ```
 
-Simply run `focus_crawl.py` to get all of the Theory of Computing Courses and all possible prerequisites in a printed form in the console.
+Simply run `focus_crawl.py` to get all of the Theory of Computing Courses and all possible prerequisites in a printed form in the console. (Or modify it for your own use case at [Line 176](./scraping/focus_crawl.py#L176))
 
 For targetting more individualized examples, you can run `crawl.py`, which allows one to find the prerequisite lineage of specific Arts and Science Course URLs.
 
@@ -90,13 +90,13 @@ result_visited = test.visited
 print(result_visited)
 ```
 
-Simply run `crawl.py` for the CSC240H1 lineage of courses.
+Simply run `crawl.py` for the CSC240H1 lineage of courses. (Or modify it for your own use case at [Line 364](./scraping/crawl.py#L364)) 
 
 #### Loading the Neo4j Database with Course Data
 
 First I scraped the academic calendar, this generates a compiled list of english descriptions for each course in `files/output.txt`.
 
-- The code for the above process can be found in `/tests/test_focus_explore.py` [Line 257](./scraping/tests/test_focus_explore.py#L257)
+- The code for the above process can be found in `/tests/test_focus_explore.py` [Line 249](./scraping/tests/test_focus_explore.py#L249)
 
 Due to UofT's inconsistent prerequisite description syntax, I converted the prerequisite relationships into parsable data by human labor in `files/output.py`.
 
