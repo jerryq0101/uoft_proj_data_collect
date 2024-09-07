@@ -1,7 +1,5 @@
 # Prerequisite Visualizer (UofT) - Data Processing
 
----
-
 ### Scripts used for UofT data scraping and uploading to Neo4j DB
 
 ### Table of Contents
