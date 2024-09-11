@@ -186,4 +186,3 @@ if __name__ == "__main__":
         print("Prerequisite:", prereq_list[i])
         print("Corequisite:", coreq_list[i])
         print("\n\n")
-

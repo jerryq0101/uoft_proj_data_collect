@@ -401,8 +401,8 @@ csc401h1_pre = [
 csc401h1_cor = []
 
 csc207h1_pre = [
-    {"code": "CSC148H1", "min_req": "60%"},
-    {"code": "CSC111H1", "min_req": "60%"}
+    ({"code": "CSC148H1", "min_req": "60%"},
+    {"code": "CSC111H1", "min_req": "60%"})
 ]
 csc207h1_cor = []
 

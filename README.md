@@ -2,15 +2,20 @@
 
 ### Scripts used for UofT data scraping and uploading to Neo4j DB
 
+---
+
 ### Table of Contents
 - [Description](#description)
-- [Files](#files)
+- [Other Parts of Complete App](#other-parts-of-complete-app)
+- [Demo of Frontend](#demo-of-frontend-below)
+- [Directory](#directory)
 - [Key Features](#key-features)
 - [Setup and Usage](#setup-and-usage)
   - [Dependencies](#dependencies)
   - [Scraping](#scraping)
-  - [Loading the Neo4j Database](#loading-the-neo4j-database-with-course-data)
+  - [Loading the Neo4j Database with Course Data](#loading-the-neo4j-database-with-course-data)
 - [Results and Understanding](#results-and-understanding)
+
 
 ---
 
@@ -18,12 +23,19 @@
 
 This repository contains the scripts used to scrape data from individual University of Toronto (UofT) course pages and upload them to a Neo4j database. These scripts are part of a larger project aimed at visualizing course prerequisites. (ADD LINKS TO OTHER REPOS)
 
+### Other Parts of Complete App
 
-#### Directory
+- [Frontend Application](https://github.com/jerryq0101/uoft_proj_frontend)
+- [Backend API and queries processing](https://github.com/jerryq0101/uoft_proj_api)
 
-- ``scraping/``: Contains scripts that fetch data from UofT pages and store them in the files/ folder.
-- `db/`: Contains scripts that parse data from the files/ folder and create nodes and relationships in the Neo4j database.
-- `files/`: Stores the scraped data before it's processed and uploaded to the database.
+### DEMO OF FRONTEND BELOW 👇👇👇
+<a href="https://www.loom.com/share/eb36ca35833e4d8d8d2c9bfcde9f4ceb" target="_blank">
+  <img src="./public/demo_thumb.png" alt="VIDEO DEMO">
+</a>
+
+
+### Directory
+
 ```
 └── uoft_proj_data_collect/
     ├── db
@@ -31,7 +43,11 @@ This repository contains the scripts used to scrape data from individual Univers
     └── scraping
 ```
 
+- ``scraping/``: Contains scripts that fetch data from UofT pages and store them in the files/ folder.
+- `db/`: Contains scripts that parse data from the files/ folder and create nodes and relationships in the Neo4j database.
+- `files/`: Stores the scraped data before it's processed and uploaded to the database.
 
+<br></br>
 ---
 
 ### Key Features
@@ -111,7 +127,9 @@ Due to UofT's inconsistent prerequisite description syntax, I converted the prer
 
 This took north of 2 hours. FML.
 
-To load the `output.py` data into a Neo4j database, first make a .env file containing your Neo4j DB details.
+Technically, since the output.py is already formatted here, you can just ignore the scraping process.
+
+To load the `output.py` data into a new Neo4j database, first make a .env file containing your Neo4j DB details.
 ```
 N4J_DB_URI=
 N4J_DB_PASS=
